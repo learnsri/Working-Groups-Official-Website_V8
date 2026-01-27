@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People</title>
+
+  <!-- Font (matches your CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/pages/People.css" />
+  <link rel="icon" href="test logo.png" type="image/x-icon" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo"><h2>People</h2></div>
+
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/AgroTec WG.html">AgroTec WG</a></li>
+        <li><a href="../pages/GenAI WG.html">GenAI WG</a></li>
+        <li><a href="../pages/People.html" class="active">People</a></li>
+        <li><a href="../pages/news/news.html">News and Updates</a></li>
+        <li><a href="../pages/Contact.html">Contact</a></li>
+      </ul>
+
+      <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="hero-inner">
+      <h1>Working Group People</h1>
+      <p>Leadership and members for GenAI and AgroTec Working Groups.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="page-wrap">
+
+    <!-- ====================== GenAI BLOCK ====================== -->
+    <section class="wg-block wg-block--genai">
+
+      <div class="wg-head">
+        <div class="wg-head-top">
+          <img src="../assets/images/icons/favicon.png" alt="GenAI Working Group Logo" class="wg-logo" />
+          <div class="wg-head-text">
+            <h2 class="wg-title">GenAI Working Group</h2>
+            <p class="wg-subtitle">Leadership</p>
+          </div>
+        </div>
+
+        <!-- Leadership (Chair > Co-Chair) -->
+        <div class="leadership-card">
+          <div class="leadership-title">
+            <span class="dot dot--genai"></span>
+            <h3>Working Group Leadership</h3>
+          </div>
+
+          <div class="leadership-grid">
+
+            <!-- Chair -->
+            <div class="person-row person-row--chair person-row--genai">
+              <div class="person-left">
+                <img src="../assets/images/People/user.png" alt="Chairperson" class="avatar avatar--lg" />
+                <div class="person-info">
+                  <span class="role-pill role-pill--genai">Chairperson</span>
+                  <span class="person-name">Dr. Asitha Bandaranayake</span>
+                  <span class="person-meta">CTO · LEARN, Sri Lanka</span>
+                </div>
+              </div>
+              <div class="person-actions">
+                <button onclick="copyEmail('asitha@learn.ac.lk')" title="Copy Email">
+                  <img src="../assets/images/icons/mail.png" alt="Email" />
+                </button>
+                <a href="https://linkedin.com/in/USERNAME" target="_blank" title="LinkedIn">
+                  <img src="../assets/images/icons/linkedin.png" alt="LinkedIn" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Co-Chair -->
+            <div class="person-row person-row--vice person-row--genai">
+              <div class="person-left">
+                <img src="../assets/images/People/user.png" alt="Co-Chair" class="avatar" />
+                <div class="person-info">
+                  <span class="role-pill role-pill--genai">Co-Chair</span>
+                  <span class="person-name">Dr. Pramila Gamage</span>
+                  <span class="person-meta">Department of Manufacturing & Industrial Engineering · Faculty of Engineering · University of Peradeniya</span>
+                </div>
+              </div>
+              <div class="person-actions">
+                <button onclick="copyEmail('genai-cochair@learn.ac.lk')" title="Copy Email">
+                  <img src="../assets/images/icons/mail.png" alt="Email" />
+                </button>
+                <a href="https://linkedin.com/in/USERNAME" target="_blank" title="LinkedIn">
+                  <img src="../assets/images/icons/linkedin.png" alt="LinkedIn" />
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Members list (no roles/participants/subgroups) -->
+
+
+    </section>
+
+
+    <!-- ====================== AgroTec BLOCK ====================== -->
+    <section class="wg-block wg-block--agrotec">
+
+      <div class="wg-head">
+        <div class="wg-head-top">
+          <img src="../assets/images/brand/AgroTechLogo.png" alt="AgroTec Working Group Logo" class="wg-logo" />
+          <div class="wg-head-text">
+            <h2 class="wg-title">AgroTec Working Group</h2>
+            <p class="wg-subtitle">Leadership</p>
+          </div>
+        </div>
+
+        <div class="leadership-card">
+          <div class="leadership-title">
+            <span class="dot dot--agrotec"></span>
+            <h3>Working Group Leadership</h3>
+          </div>
+
+          <div class="leadership-grid">
+
+            <!-- Chair -->
+            <div class="person-row person-row--chair person-row--agrotec">
+              <div class="person-left">
+                <img src="../assets/images/People/user.png" alt="Chairperson" class="avatar avatar--lg" />
+                <div class="person-info">
+                  <span class="role-pill role-pill--agrotec">Chairperson</span>
+                  <span class="person-name">Prof. Chalinda Beneragama</span>
+                  <span class="person-meta">Department of Crop Science · Faculty of Agriculture · University of Peradeniya, Sri Lanka</span>
+                </div>
+              </div>
+              <div class="person-actions">
+                <button onclick="copyEmail('agrotec-chair@learn.ac.lk')" title="Copy Email">
+                  <img src="../assets/images/icons/mail.png" alt="Email" />
+                </button>
+                <a href="https://linkedin.com/in/USERNAME" target="_blank" title="LinkedIn">
+                  <img src="../assets/images/icons/linkedin.png" alt="LinkedIn" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Co-Chair -->
+            <div class="person-row person-row--vice person-row--agrotec">
+              <div class="person-left">
+                <img src="../assets/images/People/user.png" alt="Co-Chair" class="avatar" />
+                <div class="person-info">
+                  <span class="role-pill role-pill--agrotec">Co-Chair</span>
+                  <span class="person-name">Prof. Asanga Ampitiyawaththa</span>
+                  <span class="person-meta">Department of Export Agriculture · Faculty of Agricultural Sciences · Sabaragamuwa University of Sri Lanka</span>
+                </div>
+              </div>
+              <div class="person-actions">
+                <button onclick="copyEmail('agrotec-cochair1@learn.ac.lk')" title="Copy Email">
+                  <img src="../assets/images/icons/mail.png" alt="Email" />
+                </button>
+                <a href="https://linkedin.com/in/USERNAME" target="_blank" title="LinkedIn">
+                  <img src="../assets/images/icons/linkedin.png" alt="LinkedIn" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Co-Chair -->
+            <div class="person-row person-row--secretariat person-row--agrotec">
+              <div class="person-left">
+                <img src="../assets/images/People/user.png" alt="Co-Chair" class="avatar" />
+                <div class="person-info">
+                  <span class="role-pill role-pill--agrotec">Co-Chair</span>
+                  <span class="person-name">Dr. Nuwan De Silva</span>
+                  <span class="person-meta">Department of Crop Science · Faculty of Agriculture · University of Peradeniya, Sri Lanka</span>
+                </div>
+              </div>
+              <div class="person-actions">
+                <button onclick="copyEmail('agrotec-cochair2@learn.ac.lk')" title="Copy Email">
+                  <img src="../assets/images/icons/mail.png" alt="Email" />
+                </button>
+                <a href="https://linkedin.com/in/USERNAME" target="_blank" title="LinkedIn">
+                  <img src="../assets/images/icons/linkedin.png" alt="LinkedIn" />
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ====================== GENERAL MEMBER LIST ====================== -->
+<section class="wg-block wg-block--members">
+
+  <div class="wg-head">
+    <div class="wg-head-top">
+      <div class="wg-head-text">
+        <h2 class="wg-title">General Members</h2>
+      </div>
+    </div>
+  </div>
+
+  <section class="members-card members-card--neutral">
+    <header class="members-head">
+      <h3 class="members-title">Member List</h3>
+    </header>
+
+    <ul class="name-grid">
+      <li class="name-card">Dr. Thilina Madusanka Thanthriwatta</li>
+      <li class="name-card">Dr. Tharaga Sharmilan</li>
+      <li class="name-card">Dr. ACP Priyankara</li>
+      <li class="name-card">Ms. Sajarupan Tharumaraja</li>
+      <li class="name-card">Prof. Lasith Gunawardena</li>
+      <li class="name-card">Dr. Upanith Sithira Liyanaarachchi</li>
+      <li class="name-card">Dr. Suneth Namal Karunarathna</li>
+      <li class="name-card">Dr. Udawasala Mudiyanselage Aruna Kumara</li>
+      <li class="name-card">Dr. S.H. Nuwan P. De Silva</li>
+      <li class="name-card">Prof. Asanga Deshapriya Ampitiyawatta</li>
+      <li class="name-card">Dr. Chandana K Jayathilake</li>
+      <li class="name-card">Dr. Kokila Harshan Ramanayaka</li>
+      <li class="name-card">Mr. Niroash Gnanachelvam</li>
+      <li class="name-card">Prof. Chandana Gamage</li>
+      <li class="name-card">Prof. Shironica Priyanthi Karunanayaka</li>
+      <li class="name-card">Dr. Vanitha Prasannath</li>
+      <li class="name-card">Mr. Sulaima Lebbe Abdul Haleem</li>
+      <li class="name-card">Prof. Attulugamage Thushari Priyangika Silva</li>
+      <li class="name-card">Dr. Sugandima Mihirani Vidanagamachchi</li>
+      <li class="name-card">Prof. Jayalath Ekanayake</li>
+      <li class="name-card">Dr. Herath Mudiyanselage Subhash Niroshan Ariyadasa</li>
+      <li class="name-card">Dr. Mylvaganam Nithurshan</li>
+      <li class="name-card">Prof. Nugawela Nilamelage Ruwani Nilushi Nugara</li>
+    </ul>
+
+  </section>
+
+</section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer site-footer--premium">
+    <div class="footer-glow"></div>
+
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>LEARN Working Groups</h3>
+        <p>
+          Building collaborative pathways for AI, digital research, and agriculture technology through nationally coordinated working groups.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="People.html">People</a></li>
+          <li><a href="GenAI WG.html">GenAI WG</a></li>
+          <li><a href="AgroTec WG.html">AgroTec WG</a></li>
+          <li><a href="News & Updates.html">News & Updates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-connect">
+        <h4>Connect</h4>
+        <p>Stay connected with our working groups, research initiatives, and upcoming programs.</p>
+        <div class="footer-social">
+          <a href="#" title="LinkedIn"><img src="../assets/images/icons/linkedin.png" alt="LinkedIn"></a>
+          <a href="#" title="Email"><img src="../assets/images/icons/mail.png" alt="Email"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Lanka Education and Research Network. All rights reserved.
+    </div>
+  </footer>
+
+  <div id="copy-toast" class="copy-toast">Email copied to clipboard</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

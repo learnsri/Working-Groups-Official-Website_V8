@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News & Updates</title>
+  <link rel="stylesheet" href="../../assets/css/pages/news-updates.css">
+  <link rel="icon" href="test logo.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo"><h2>News & Updates</h2></div>
+
+      <ul class="nav-menu">
+          <li><a href="../../index.html" >Home</a></li>
+          <li><a href="../../pages/About.html">About Us</a></li>
+          <li><a href="../../pages/GenAI WG.html">GenAI WG</a></li>
+          <li><a href="../../pages/AgroTec WG.html">AgroTec WG</a></li>
+          <li><a href="../../pages/news/news.html" class="active">News & Updates</a></li>
+          <li><a href="../../pages/People.html">People</a></li>
+          <li><a href="../../pages/Contact.html">Contact</a></li>
+      </ul>
+
+      <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="news-hero">
+    <div class="container news-hero-inner">
+      <div class="news-hero-copy">
+        <p class="hero-kicker">Updates from the community</p>
+        <h1>News & Updates</h1>
+        <p class="hero-sub">
+          Short summaries of the latest announcements, progress, and reports from LEARN working groups.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#latest">View latest</a>
+          <a class="btn btn-ghost" href="NEWS Archive.html">Open archive</a>
+        </div>
+      </div>
+
+      <div class="news-hero-card">
+        <div class="mini-stat">
+          <span class="mini-label">Latest post</span>
+          <span class="mini-value">AI Literacy for All</span>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-label">Filters</span>
+          <span class="mini-value">All • AgroTec • GenAI</span>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-label">Archive</span>
+          <span class="mini-value">Older posts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="category-strip" id="latest">
+    <div class="container">
+      <div class="section-head">
+        <h2>Latest summaries</h2>
+        <p>Filter by working group. Click any card to open the full article page.</p>
+      </div>
+
+      <div class="category-grid" role="tablist" aria-label="News filters">
+        <button class="category-card active" type="button" data-filter="all" role="tab" aria-selected="true">
+          <div class="cat-icon">🗂️</div>
+          <div class="cat-text">
+            <h3>All Updates</h3>
+            <p>Everything in one view.</p>
+          </div>
+          <span class="cat-chip">All</span>
+        </button>
+
+        <button class="category-card" type="button" data-filter="agrotec" role="tab" aria-selected="false">
+          <div class="cat-icon">🌾</div>
+          <div class="cat-text">
+            <h3>AgroTec</h3>
+            <p>Agriculture technology, AI + IoT for farming.</p>
+          </div>
+          <span class="cat-chip">AgroTec</span>
+        </button>
+
+        <button class="category-card" type="button" data-filter="genai" role="tab" aria-selected="false">
+          <div class="cat-icon">🤖</div>
+          <div class="cat-text">
+            <h3>GenAI</h3>
+            <p>Generative AI for productivity and innovation.</p>
+          </div>
+          <span class="cat-chip">GenAI</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- News list (5–6 summaries max) -->
+  <main class="news-list">
+    <div class="container">
+
+      <div class="news-grid" id="newsGrid">
+
+        <!-- 1) AI Literacy for All (links to full article page) -->
+        <a class="news-card" href="Launch of “AI Literacy for All” at LEARN36.html" data-category="genai" aria-label="Open article: Launch of AI Literacy for All at LEARN36">
+          <div class="news-thumb">
+            <img src="../../assets/images/photos/_ORP4419.jpg"  alt="AI Literacy for All launch at LEARN36" />
+
+          </div>
+          <div class="news-card-body">
+            <div class="card-meta">
+              <span class="meta-pill small"><span class="dot"></span> GenAI</span>
+              <time datetime="2026-01-18">Jan 18, 2026</time>
+            </div>
+            <h3>Launch of “AI Literacy for All” at LEARN36</h3>
+            <p>
+              A nationwide initiative expanding access to AI education in Sinhala and Tamil, announced during LEARN36.
+            </p>
+            <div class="card-tags">
+              <span class="pill">AI Literacy</span>
+              <span class="pill">LEARN36</span>
+              <span class="pill">National Initiative</span>
+            </div>
+
+            <div class="card-cta">
+              <span class="btn btn-small btn-primary">Read full article</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2) AgroTec planning meeting -->
+        <!-- <a class="news-card" href="AgroTec WG — First planning meeting summary.html" data-category="agrotec" aria-label="Open article: AgroTec WG — First planning meeting summary">
+          <div class="news-thumb">
+            <img src="AgroTec WG — First planning meeting summary.png" alt="AgroTec working group update" />
+          </div>
+          <div class="news-card-body">
+            <div class="card-meta">
+              <span class="meta-pill small"><span class="dot"></span> AgroTec</span>
+              <time datetime="2026-01-10">Jan 10, 2026</time>
+            </div>
+            <h3>AgroTec WG — First planning meeting summary</h3>
+            <p>
+              Objectives, collaboration themes, and how the sub-groups will operate in the first phase.
+            </p>
+            <div class="card-tags">
+              <span class="pill">Agriculture</span>
+              <span class="pill">IoT</span>
+              <span class="pill">Research</span>
+            </div>
+
+            <div class="card-cta">
+              <span class="btn btn-small btn-primary">Read more</span>
+            </div>
+          </div>
+        </a> -->
+
+        <!-- 3) GenAI pipeline -->
+        <!-- <a class="news-card" href="GenAI WG — Community project pipeline opens.html" data-category="genai" aria-label="Open article: GenAI WG — Community project pipeline opens">
+          <div class="news-thumb">
+            <img src="GenAI WG — Community project pipeline opens.png" alt="GenAI working group update" />
+          </div>
+          <div class="news-card-body">
+            <div class="card-meta">
+              <span class="meta-pill small"><span class="dot"></span> GenAI</span>
+              <time datetime="2026-01-05">Jan 5, 2026</time>
+            </div>
+            <h3>GenAI WG — Community project pipeline opens</h3>
+            <p>
+              A lightweight structure to collect ideas and match mentors, collaborators, and reviewers.
+            </p>
+            <div class="card-tags">
+              <span class="pill">Productivity</span>
+              <span class="pill">Innovation</span>
+              <span class="pill">Community</span>
+            </div>
+
+            <div class="card-cta">
+              <span class="btn btn-small btn-primary">Read more</span>
+            </div>
+          </div>
+        </a> -->
+
+        <!-- 4) Open datasets -->
+        <!-- <a class="news-card" href="Data collection & open datasets — next steps.html" data-category="agrotec" aria-label="Open article: Data collection & open datasets — next steps">
+          <div class="news-thumb">
+            <img src="Data collection & open datasets.png" alt="Field technology update" />
+          </div>
+          <div class="news-card-body">
+            <div class="card-meta">
+              <span class="meta-pill small"><span class="dot"></span> AgroTec</span>
+              <time datetime="2025-12-22">Dec 22, 2025</time>
+            </div>
+            <h3>Data collection & open datasets — next steps</h3>
+            <p>
+              Early focus areas for shared datasets, data governance, standards, and collaboration.
+            </p>
+            <div class="card-tags">
+              <span class="pill">Open Data</span>
+              <span class="pill">Standards</span>
+            </div>
+
+            <div class="card-cta">
+              <span class="btn btn-small btn-primary">Read more</span>
+            </div>
+          </div>
+        </a> -->
+
+        <!-- 5) Placeholder (optional) -->
+        <!-- <a class="news-card" href="Working Groups — Quarterly update.html" data-category="genai agrotec" aria-label="Open article: Working Groups — Quarterly update">
+          <div class="news-thumb">
+            <img src="istockphoto-816752606-612x612 (1).jpg" alt="Working groups update" />
+          </div>
+          <div class="news-card-body">
+            <div class="card-meta">
+              <span class="meta-pill small"><span class="dot"></span> All</span>
+              <time datetime="2025-12-10">Dec 10, 2025</time>
+            </div>
+            <h3>Working Groups — Quarterly update</h3>
+            <p>
+              A short snapshot of meetings, outputs, and upcoming priorities across the working groups.
+            </p>
+            <div class="card-tags">
+              <span class="pill">Updates</span>
+              <span class="pill">Roadmap</span>
+            </div>
+
+            <div class="card-cta">
+              <span class="btn btn-small btn-primary">Read more</span>
+            </div>
+          </div>
+        </a> -->
+
+        <!-- 6) Placeholder (optional) -->
+        <!-- <a class="news-card" href="Community — New contributors welcome.html" data-category="genai" aria-label="Open article: Community — New contributors welcome">
+          <div class="news-thumb">
+            <img src="istockphoto-816752606-612x612 (1).jpg" alt="Community update" />
+          </div>
+          <div class="news-card-body">
+            <div class="card-meta">
+              <span class="meta-pill small"><span class="dot"></span> GenAI</span>
+              <time datetime="2025-12-02">Dec 2, 2025</time>
+            </div>
+            <h3>Community — New contributors welcome</h3>
+            <p>
+              How to join a sub-group, contribute to projects, and participate in review and documentation.
+            </p>
+            <div class="card-tags">
+              <span class="pill">Community</span>
+              <span class="pill">Onboarding</span>
+            </div>
+
+            <div class="card-cta">
+              <span class="btn btn-small btn-primary">Read more</span>
+            </div>
+          </div>
+        </a> -->
+
+      </div>
+
+      <div class="archive-cta">
+        <div class="archive-cta-inner">
+          <div>
+            <h2>Looking for older updates?</h2>
+            <p>Visit the archive to browse previous news posts and announcements.</p>
+          </div>
+          <a class="btn btn-ghost" href="NEWS Archive.html">Open NEWS Archive</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer (keep yours) -->
+  <footer class="site-footer site-footer--premium">
+    <div class="footer-glow"></div>
+
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>LEARN Working Groups</h3>
+        <p>
+          Building collaborative pathways for AI, digital research, and agriculture technology through nationally coordinated working groups.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="People.html">People</a></li>
+          <li><a href="GenAI WG.html">GenAI WG</a></li>
+          <li><a href="AgroTec WG.html">AgroTec WG</a></li>
+          <li><a href="News & Updates.html">News & Updates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-connect">
+        <h4>Connect</h4>
+        <p>
+          Stay connected with our working groups, research initiatives,
+          and upcoming programs.
+        </p>
+
+        <div class="footer-social">
+          <a href="#" title="LinkedIn"><img src="../../assets/images/icons/linkedin.png" alt="LinkedIn"></a>
+          <a href="#" title="Email"><img src="../../assets/images/icons/mail.png" alt="Email"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Lanka Education And Research Network (LEARN). All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Your existing hamburger / global JS -->
+  <script src="script.js"></script>
+
+  <!-- Filter logic (front page only) -->
+  <script>
+    (function () {
+      const filterButtons = document.querySelectorAll('.category-card[data-filter]');
+      const cards = document.querySelectorAll('.news-card[data-category]');
+
+      function setActive(btn) {
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+      }
+
+      function applyFilter(filter) {
+        cards.forEach(card => {
+          const cat = (card.getAttribute('data-category') || '').toLowerCase();
+          const show = filter === 'all' ? true : cat.split(' ').includes(filter);
+          card.style.display = show ? '' : 'none';
+        });
+      }
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          setActive(btn);
+          applyFilter(filter);
+        });
+      });
+
+      // default
+      applyFilter('all');
+    })();
+  </script>
+</body>
+</html>
