@@ -1,0 +1,349 @@
+/* =========================================================
+   AgroTechSubGroupComingSoon.css
+   - Green theme (AgroTec)
+   - DOES NOT touch your NAVBAR / FOOTER (those come from People.css)
+   - Only styles the page content:
+     .cs-simple, .cs-banner, .cs-strip, .cs-promise, etc.
+========================================================= */
+
+:root{
+  /* AgroTec greens */
+  --cs-green: #48bb78;
+  --cs-green-dark: #1f7a4d;
+  --cs-green-tint: rgba(72,187,120,0.12);
+
+  --cs-text: #0f172a;
+  --cs-muted: rgba(15,23,42,0.66);
+  --cs-card: rgba(255,255,255,0.92);
+  --cs-line: rgba(15,23,42,0.10);
+
+  --cs-shadow:
+    0 12px 30px rgba(15,23,42,0.08),
+    0 3px 10px rgba(15,23,42,0.05);
+
+  --cs-radius-xl: 26px;
+  --cs-radius-lg: 20px;
+  --cs-radius-md: 16px;
+}
+
+/* =========================
+   PAGE WRAP
+========================= */
+.cs-simple{
+  width: 90%;
+  max-width: 1100px;
+  margin: 36px auto 56px;
+  display: grid;
+  gap: 18px;
+}
+
+/* =========================
+   BANNER
+========================= */
+.cs-banner{
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--cs-radius-xl);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(72,187,120,0.22), transparent 55%),
+    radial-gradient(circle at 80% 25%, rgba(72,187,120,0.12), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.86));
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: var(--cs-shadow);
+}
+
+.cs-banner::before{
+  content:"";
+  position: absolute;
+  inset: -40px -60px auto auto;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle at 35% 35%, rgba(72,187,120,0.24), transparent 62%);
+  filter: blur(8px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.cs-banner-inner{
+  position: relative;
+  padding: 34px 24px 30px;
+  text-align: center;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+/* pill */
+.cs-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(72,187,120,0.12);
+  border: 1px solid rgba(72,187,120,0.18);
+  font-weight: 900;
+  font-size: 13px;
+  color: rgba(31,122,77,0.96);
+  letter-spacing: .2px;
+}
+
+.cs-pulse{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--cs-green);
+  box-shadow: 0 0 0 7px rgba(72,187,120,0.14);
+  animation: csPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes csPulse{
+  0%, 100%{ transform: scale(1); opacity: 1; }
+  50%{ transform: scale(1.25); opacity: .72; }
+}
+
+.cs-h1{
+  font-size: clamp(28px, 3.4vw, 46px);
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  color: rgba(15,23,42,0.94);
+  max-width: 24ch;
+}
+
+.cs-accent{
+  background: linear-gradient(90deg, var(--cs-green), rgba(120,220,170,1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cs-lead{
+  max-width: 70ch;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--cs-muted);
+}
+
+/* actions */
+.cs-actions{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.cs-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-weight: 900;
+  font-size: 14.5px;
+  border: 1px solid transparent;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.cs-btn--primary{
+  background: linear-gradient(135deg, var(--cs-green), var(--cs-green-dark));
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(72,187,120,0.22);
+}
+
+.cs-btn--primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(72,187,120,0.28);
+}
+
+.cs-btn--ghost{
+  background: rgba(15,23,42,0.04);
+  border-color: rgba(15,23,42,0.10);
+  color: rgba(15,23,42,0.88);
+}
+
+.cs-btn--ghost:hover{
+  transform: translateY(-2px);
+  background: rgba(15,23,42,0.06);
+  box-shadow: 0 14px 28px rgba(15,23,42,0.10);
+}
+
+/* =========================
+   PROGRESS STRIP
+========================= */
+.cs-strip{
+  border-radius: var(--cs-radius-xl);
+  background: var(--cs-card);
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: var(--cs-shadow);
+  padding: 14px 14px;
+}
+
+.cs-strip-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cs-step{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(15,23,42,0.08);
+  background: rgba(255,255,255,0.86);
+  min-width: 0;
+  flex: 1;
+}
+
+.cs-dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.18);
+  box-shadow: 0 0 0 7px rgba(15,23,42,0.06);
+  flex-shrink: 0;
+}
+
+/* done */
+.cs-step--done .cs-dot{
+  background: var(--cs-green-dark);
+  box-shadow: 0 0 0 8px rgba(72,187,120,0.12);
+}
+
+/* active */
+.cs-step--active{
+  border-color: rgba(72,187,120,0.22);
+  background: radial-gradient(circle at 20% 20%, rgba(72,187,120,0.12), rgba(255,255,255,0.88));
+}
+
+.cs-step--active .cs-dot{
+  background: var(--cs-green);
+  box-shadow: 0 0 0 9px rgba(72,187,120,0.14);
+}
+
+.cs-step-title{
+  font-weight: 900;
+  font-size: 14.5px;
+  color: rgba(15,23,42,0.92);
+  letter-spacing: -0.2px;
+}
+
+.cs-step-sub{
+  font-size: 13.2px;
+  color: rgba(15,23,42,0.62);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 38ch;
+}
+
+.cs-line{
+  width: 26px;
+  height: 2px;
+  background: rgba(15,23,42,0.10);
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   PROMISE CARD
+========================= */
+.cs-promise{
+  display: grid;
+}
+
+.cs-promise-card{
+  border-radius: var(--cs-radius-xl);
+  background:
+    radial-gradient(circle at 18% 10%, rgba(72,187,120,0.14), transparent 60%),
+    rgba(255,255,255,0.92);
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: var(--cs-shadow);
+  padding: 18px 18px;
+  text-align: center;
+}
+
+.cs-h2{
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  color: rgba(15,23,42,0.92);
+}
+
+.cs-p{
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(15,23,42,0.68);
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cs-link{
+  display: inline-flex;
+  margin-top: 12px;
+  font-weight: 900;
+  color: rgba(31,122,77,0.98);
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.cs-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:100%;
+  height:3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--cs-green), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+
+.cs-link:hover::after{
+  transform: scaleX(1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px){
+  .cs-strip-inner{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cs-line{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .cs-step-sub{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px){
+  .cs-simple{ width: 92%; margin-top: 22px; gap: 14px; }
+  .cs-banner-inner{ padding: 26px 14px 22px; }
+  .cs-lead{ font-size: 15.5px; }
+}
+
+/* =========================
+   REMOVE HOVER JUMP ON TOUCH
+========================= */
+@media (hover: none){
+  .cs-btn:hover{ transform: none; }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce){
+  .cs-pulse{ animation: none; }
+}

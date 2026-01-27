@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>News & Updates</title>
-  <link rel="stylesheet" href="../../assets/css/pages/news-updates.css">
+  <link rel="stylesheet" href="../../assets/css/pages/News-Updates.css">
   <link rel="icon" href="test logo.png" type="image/x-icon" />
 </head>
 
@@ -324,6 +324,75 @@
 
   <!-- Filter logic (front page only) -->
   <script>
+
+    // script.js — Mobile nav toggle (open/close) + accessibility
+
+(() => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if (!hamburger || !navMenu) return;
+
+  const openMenu = () => {
+    hamburger.classList.add("active");
+    navMenu.classList.add("active");
+    document.body.style.overflow = "hidden"; // prevent background scroll
+  };
+
+  const closeMenu = () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    document.body.style.overflow = ""; // restore scroll
+  };
+
+  const toggleMenu = () => {
+    const isOpen = navMenu.classList.contains("active");
+    isOpen ? closeMenu() : openMenu();
+  };
+
+  // Click to toggle
+  hamburger.addEventListener("click", toggleMenu);
+
+  // Keyboard support (Enter / Space)
+  hamburger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Close when clicking a nav link
+  navMenu.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (link) closeMenu();
+  });
+
+  // Close when clicking outside the menu
+  document.addEventListener("click", (e) => {
+    const clickedInsideMenu = navMenu.contains(e.target);
+    const clickedHamburger = hamburger.contains(e.target);
+
+    if (!clickedInsideMenu && !clickedHamburger && navMenu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navMenu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+
+  // Optional: close menu if screen resized to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 && navMenu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+})();
+
+
     (function () {
       const filterButtons = document.querySelectorAll('.category-card[data-filter]');
       const cards = document.querySelectorAll('.news-card[data-category]');

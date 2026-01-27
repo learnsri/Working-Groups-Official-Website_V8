@@ -22,7 +22,7 @@
 
       <ul class="nav-menu">
         <li><a href="../index.html" >Home</a></li>
-        <li><a href="../pages/about.html" >About</a></li>
+        <li><a href="../pages/About.html" >About</a></li>
         <li><a href="../pages/AgroTec WG.html">AgroTec WG</a></li>
         <li><a href="../pages/GenAI WG.html">GenAI WG</a></li>
         <li><a href="../pages/People.html">People</a></li>
@@ -203,7 +203,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 
   <!-- Copy buttons -->
   <script>
@@ -225,6 +225,74 @@
         }
       });
     });
+
+    // script.js — Mobile nav toggle (open/close) + accessibility
+
+(() => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if (!hamburger || !navMenu) return;
+
+  const openMenu = () => {
+    hamburger.classList.add("active");
+    navMenu.classList.add("active");
+    document.body.style.overflow = "hidden"; // prevent background scroll
+  };
+
+  const closeMenu = () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    document.body.style.overflow = ""; // restore scroll
+  };
+
+  const toggleMenu = () => {
+    const isOpen = navMenu.classList.contains("active");
+    isOpen ? closeMenu() : openMenu();
+  };
+
+  // Click to toggle
+  hamburger.addEventListener("click", toggleMenu);
+
+  // Keyboard support (Enter / Space)
+  hamburger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Close when clicking a nav link
+  navMenu.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (link) closeMenu();
+  });
+
+  // Close when clicking outside the menu
+  document.addEventListener("click", (e) => {
+    const clickedInsideMenu = navMenu.contains(e.target);
+    const clickedHamburger = hamburger.contains(e.target);
+
+    if (!clickedInsideMenu && !clickedHamburger && navMenu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navMenu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+
+  // Optional: close menu if screen resized to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 && navMenu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+})();
+
   </script>
 
 </body>
