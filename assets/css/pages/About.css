@@ -23,7 +23,7 @@
   --shadow: 0 10px 26px rgba(15,23,42,0.08);
   --shadow2: 0 14px 34px rgba(15,23,42,0.10);
 
-  /* Partner palettes (requested) */
+  /* Partner palettes */
   --learn-red:#b90046;
   --learn-blue:#003d77;
   --apan-orange:#ee6e0b;
@@ -62,6 +62,14 @@ em{
   font-style: normal;
   font-weight: 800;
   color: var(--ink);
+}
+
+/* Small typography polish for “official” feel */
+.content-main p{
+  text-wrap: pretty;
+}
+.hero-lead{
+  text-wrap: balance;
 }
 
 /* =========================
@@ -137,7 +145,7 @@ em{
 }
 
 /* =========================
-   HERO (BETTER BACKGROUND + NO TAGS)
+   HERO
 ========================= */
 .about-hero{
   position: relative;
@@ -181,40 +189,12 @@ em{
   letter-spacing: -0.8px;
   color: var(--ink);
   margin-bottom: 12px;
-  max-width: 28ch;
+  max-width: 30ch;
 }
 .hero-lead{
   font-size: 16.2px;
   color: var(--muted);
-  max-width: 78ch;
-}
-.hero-mini{
-  margin-top: 18px;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  max-width: 720px;
-}
-.mini{
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(15,23,42,0.10);
-  border-radius: 16px;
-  padding: 12px 12px;
-  box-shadow: 0 10px 22px rgba(15,23,42,0.05);
-  backdrop-filter: blur(10px);
-}
-.mini-k{
-  display:block;
-  font-size: 12px;
-  color: var(--muted2);
-  font-weight: 700;
-}
-.mini-v{
-  display:block;
-  margin-top: 2px;
-  font-size: 14.4px;
-  color: var(--ink);
-  font-weight: 800;
+  max-width: 82ch;
 }
 
 /* =========================
@@ -237,6 +217,7 @@ em{
   box-shadow: 0 12px 26px rgba(15,23,42,0.05);
 }
 
+/* Better text rhythm (your updated copy benefits from this) */
 .content-main h2{
   font-size: 22px;
   color: var(--ink);
@@ -249,6 +230,8 @@ em{
   color: var(--muted);
   margin-bottom: 12px;
 }
+.content-main p:last-child{ margin-bottom: 0; }
+
 .section-head{
   display:flex;
   justify-content:space-between;
@@ -268,7 +251,7 @@ em{
   margin: 18px 0;
 }
 
-/* Strategic shift points (simple, professional) */
+/* Strategic shift points */
 .shift-points{
   margin-top: 12px;
   display:grid;
@@ -590,6 +573,7 @@ em{
   box-shadow: 0 12px 24px rgba(15,23,42,0.07);
   transition: transform 0.2s ease;
   overflow: hidden;
+  position: relative;
 }
 .partner-card:hover{ transform: translateY(-3px); }
 
@@ -692,12 +676,9 @@ em{
 .partner-link:hover{ transform: translateY(-2px); }
 
 /* =========================
-   PARTNER COLOR THEMES (REQUESTED)
+   PARTNER COLOR THEMES
 ========================= */
-/* LEARN: #b90046, #003d77, #ffffff */
-.partner-card--learn{
-  border-color: rgba(185,0,70,0.22);
-}
+.partner-card--learn{ border-color: rgba(185,0,70,0.22); }
 .partner-card--learn::before{
   content:"";
   position:absolute;
@@ -707,9 +688,7 @@ em{
     radial-gradient(900px 420px at 110% 20%, rgba(0,61,119,0.14), transparent 55%);
   pointer-events:none;
 }
-.partner-card--learn .partner-header span{
-  color: var(--learn-blue);
-}
+.partner-card--learn .partner-header span{ color: var(--learn-blue); }
 .partner-card--learn .partner-section{
   background: rgba(0,61,119,0.06);
   border-left-color: var(--learn-red);
@@ -718,10 +697,7 @@ em{
   background: linear-gradient(135deg, var(--learn-red), var(--learn-blue));
 }
 
-/* APAN: #ee6e0b, #055cab, #000000, #ffffff */
-.partner-card--apan{
-  border-color: rgba(238,110,11,0.24);
-}
+.partner-card--apan{ border-color: rgba(238,110,11,0.24); }
 .partner-card--apan::before{
   content:"";
   position:absolute;
@@ -731,9 +707,7 @@ em{
     radial-gradient(900px 420px at 110% 20%, rgba(5,92,171,0.14), transparent 55%);
   pointer-events:none;
 }
-.partner-card--apan .partner-header span{
-  color: var(--apan-blue);
-}
+.partner-card--apan .partner-header span{ color: var(--apan-blue); }
 .partner-card--apan .partner-section{
   background: rgba(238,110,11,0.06);
   border-left-color: var(--apan-orange);
@@ -741,15 +715,11 @@ em{
 .partner-link--apan{
   background: linear-gradient(135deg, var(--apan-orange), var(--apan-blue));
 }
-
-/* Keep text readable over themed backgrounds */
 .partner-card--learn > *,
-.partner-card--apan > *{
-  position: relative;
-}
+.partner-card--apan > *{ position: relative; }
 
 /* =========================
-   PREMIUM FOOTER (KEEP)
+   PREMIUM FOOTER
 ========================= */
 .site-footer{
   margin-top: 70px;
@@ -892,7 +862,6 @@ em{
 ========================= */
 @media (max-width: 1000px){
   .hero-shell{ grid-template-columns: 1fr; }
-  .hero-mini{ grid-template-columns: 1fr; }
   .content-grid{ grid-template-columns: 1fr; }
   .content-side{ position: static; }
   .wg-grid{ grid-template-columns: 1fr; }

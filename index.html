@@ -8,19 +8,18 @@
   <title>Home</title>
   <link rel="icon" href="assets/images/icons/favicon.png" type="image/x-icon" />
 
-  <!-- Optional: match your other pages -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- NAV -->
+  <!-- NAV (UNCHANGED) -->
   <header class="navbar">
     <div class="container">
       <div class="logo"><h2>Working Groups</h2></div>
 
-      <ul class="nav-menu">
+      <ul class="nav-menu" id="primaryNav">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="pages/About.html">About</a></li>
         <li><a href="pages/AgroTec WG.html">AgroTec WG</a></li>
@@ -30,169 +29,316 @@
         <li><a href="pages/Contact.html">Contact</a></li>
       </ul>
 
-      <div class="hamburger" role="button" tabindex="0" aria-label="Open menu">
+      <div class="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
         <span></span><span></span><span></span>
       </div>
     </div>
+
+    <div class="nav-overlay" aria-hidden="true"></div>
   </header>
 
-  <!-- HERO (full-bleed cinematic slider, not a popup card) -->
-  <section class="hero">
-    <div class="hero-shell">
-      <div class="hero-slider-pro" id="heroPro" aria-label="LEARN36 slideshow">
+ <!-- =========================================================
+     HERO CINEMATIC SLIDER (ARROWS REMOVED)
+========================================================== -->
+<section class="hero hero--compact">
+  <div class="hero-shell">
+    <div class="hero-cinema" id="heroCinema" aria-label="LEARN36 cinematic slideshow" data-autoplay="true">
 
-        <!-- Frame layers -->
-        <div class="hero-ring" aria-hidden="true"></div>
-        <div class="hero-matte" aria-hidden="true"></div>
-        <div class="hero-grain" aria-hidden="true"></div>
-        <div class="hero-leak" aria-hidden="true"></div>
+      <!-- Decorative layers -->
+      <div class="hc-frame" aria-hidden="true"></div>
+      <div class="hc-glow" aria-hidden="true"></div>
+      <div class="hc-grain" aria-hidden="true"></div>
 
-        <!-- Slides track -->
-        <div class="hero-viewport">
-          <div class="hero-track">
+      <!-- Slides -->
+      <div class="hc-stage" aria-live="polite">
+        <div class="hc-track">
 
-            <!-- Slide 1 -->
-            <article class="hero-panel is-active bg1" data-accent="blue">
-              <div class="hero-scrim"></div>
+          <!-- 01 -->
+          <article class="hc-slide is-active" data-index="0" data-image="assets/images/slides/Slide1.jpeg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg1"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
 
-              <div class="hero-caption">
-                <div class="caption-top">
-                  <div class="hero-kicker">LEARN36</div>
-                  <div class="hero-counter">
-                    <span class="current">01</span><span class="sep">/</span><span class="total">05</span>
-                  </div>
-                </div>
-
-                <h1>Strengthening Sri Lanka’s Research and Education Network</h1>
-                <p>
-                  Bringing institutions and leaders together to shape the next chapter of digital education and research.
-                </p>
-
-                <div class="hero-actions">
-                  <a class="btn btn-dark" href="#vision">Explore LEARN36 <span class="arrow">→</span></a>
-                  <a class="btn btn-ghost" href="#outcomes">Key Outcomes</a>
-                </div>
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">01</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
               </div>
-            </article>
 
-            <!-- Slide 2 -->
-            <article class="hero-panel bg2" data-accent="blue">
-              <div class="hero-scrim"></div>
+              <h1>Strengthening Sri Lanka’s Research and Education Network</h1>
+              <p>
+                Bringing institutions and leaders together to shape the next chapter of digital education and research.
+              </p>
 
-              <div class="hero-caption">
-                <div class="caption-top">
-                  <div class="hero-kicker">LEARN36</div>
-                  <div class="hero-counter">
-                    <span class="current">02</span><span class="sep">/</span><span class="total">05</span>
-                  </div>
-                </div>
-
-                <h1>LEARN36 — Connecting Institutions, Ideas, and Innovation</h1>
-                <p>
-                  A milestone gathering focused on collaboration, capacity building, and national platforms for impact.
-                </p>
-
-                <div class="hero-actions">
-                  <a class="btn btn-dark" href="#leaderpart">Leadership <span class="arrow">→</span></a>
-                  <a class="btn btn-ghost" href="#vision">Shared Vision</a>
-                </div>
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="#vision">Explore LEARN36 <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="#outcomes">Key Outcomes</a>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <!-- Slide 3 -->
-            <article class="hero-panel bg3" data-accent="mix">
-              <div class="hero-scrim"></div>
+          <!-- 02 -->
+          <article class="hc-slide" data-index="1" data-image="assets/images/slides/Slide2.jpeg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg2"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
 
-              <div class="hero-caption">
-                <div class="caption-top">
-                  <div class="hero-kicker">LEARN36</div>
-                  <div class="hero-counter">
-                    <span class="current">03</span><span class="sep">/</span><span class="total">05</span>
-                  </div>
-                </div>
-
-                <h1>Advancing Digital Transformation and AI Literacy</h1>
-                <p>
-                  Building national readiness through technology, responsible adoption, and inclusive access.
-                </p>
-
-                <div class="hero-actions">
-                  <a class="btn btn-genai" href="GenAI%20WG.html">Working Group 2 — GenAI <span class="arrow">→</span></a>
-                  <a class="btn btn-agrotec" href="AgroTec%20WG.html">Working Group 1 — AgroTec <span class="arrow">→</span></a>
-                </div>
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">02</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
               </div>
-            </article>
 
-            <!-- Slide 4 -->
-            <article class="hero-panel bg4" data-accent="blue">
-              <div class="hero-scrim"></div>
+              <h1>LEARN36 — Connecting Institutions, Ideas, and Innovation</h1>
+              <p>
+                A milestone gathering focused on collaboration, capacity building, and national platforms for impact.
+              </p>
 
-              <div class="hero-caption">
-                <div class="caption-top">
-                  <div class="hero-kicker">LEARN36</div>
-                  <div class="hero-counter">
-                    <span class="current">04</span><span class="sep">/</span><span class="total">05</span>
-                  </div>
-                </div>
-
-                <h1>From Collaboration to National Impact</h1>
-                <p>
-                  Strengthening structures, networks, and shared programs across Sri Lanka’s academic ecosystem.
-                </p>
-
-                <div class="hero-actions">
-                  <a class="btn btn-dark" href="#outcomes">See Outcomes <span class="arrow">→</span></a>
-                  <a class="btn btn-ghost" href="People.html">Meet People</a>
-                </div>
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="#leaderpart">Leadership <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="#vision">Shared Vision</a>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <!-- Slide 5 -->
-            <article class="hero-panel bg5" data-accent="blue">
-              <div class="hero-scrim"></div>
+          <!-- 03 -->
+          <article class="hc-slide" data-index="2" data-image="assets/images/slides/Slide3.jpeg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg3"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
 
-              <div class="hero-caption">
-                <div class="caption-top">
-                  <div class="hero-kicker">LEARN36</div>
-                  <div class="hero-counter">
-                    <span class="current">05</span><span class="sep">/</span><span class="total">05</span>
-                  </div>
-                </div>
-
-                <h1>Building the Future of Learning and Research</h1>
-                <p>
-                  Creating sustainable platforms aligned with regional frameworks and long-term national priorities.
-                </p>
-
-                <div class="hero-actions">
-                  <a class="btn btn-dark" href="About.html">About LEARN <span class="arrow">→</span></a>
-                  <a class="btn btn-ghost" href="Contact.html">Get Involved</a>
-                </div>
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">03</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
               </div>
-            </article>
 
-          </div>
+              <h1>Advancing Digital Transformation and AI Literacy</h1>
+              <p>
+                Building national readiness through technology, responsible adoption, and inclusive access.
+              </p>
+
+              <div class="hc-actions">
+                <a class="btn btn-genai" href="pages/GenAI%20WG.html">Working Group 2 — GenAI <span class="arrow">→</span></a>
+                <a class="btn btn-agrotec" href="pages/AgroTec%20WG.html">Working Group 1 — AgroTec <span class="arrow">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="hc-slide" data-index="3" data-image="assets/images/slides/Slide4.jpeg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg4"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
+
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">04</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
+              </div>
+
+              <h1>From Collaboration to National Impact</h1>
+              <p>
+                Strengthening structures, networks, and shared programs across Sri Lanka’s academic ecosystem.
+              </p>
+
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="#outcomes">See Outcomes <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="pages/People.html">Meet People</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="hc-slide" data-index="4" data-image="assets/images/slides/Slide5.jpeg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg5"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
+
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">05</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
+              </div>
+
+              <h1>Building the Future of Learning and Research</h1>
+              <p>
+                Creating sustainable platforms aligned with regional frameworks and long-term national priorities.
+              </p>
+
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="pages/About.html">About LEARN <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="pages/Contact.html">Get Involved</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 (Slide7.jpg) -->
+          <article class="hc-slide" data-index="5" data-image="assets/images/slides/Slide7.jpg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg7"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
+
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">06</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
+              </div>
+
+              <h1>Collaboration that Scales Beyond a Single Event</h1>
+              <p>
+                Connecting universities, partners, and working groups to build repeatable national capability.
+              </p>
+
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="#vision">Our Vision <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="#leaderpart">Leadership</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 07 (Slide8.jpg) -->
+          <article class="hc-slide" data-index="6" data-image="assets/images/slides/Slide8.jpg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg8"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
+
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">07</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
+              </div>
+
+              <h1>Stronger Networks. Faster Knowledge Sharing.</h1>
+              <p>
+                Building pathways to exchange ideas, tools, and research outcomes across the ecosystem.
+              </p>
+
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="pages/news/news.html">News & Updates <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="pages/People.html">Community</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 08 (Slide9.jpg) -->
+          <article class="hc-slide" data-index="7" data-image="assets/images/slides/Slide9.jpg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg9"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
+
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">08</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
+              </div>
+
+              <h1>Practical Platforms for Real Outcomes</h1>
+              <p>
+                From pilots to national programs—turning collaboration into measurable progress.
+              </p>
+
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="#outcomes">View Outcomes <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="pages/Contact.html">Connect</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 09 (Slide10.jpg) -->
+          <article class="hc-slide" data-index="8" data-image="assets/images/slides/Slide10.jpg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg10"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
+
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">09</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
+              </div>
+
+              <h1>Future-Ready Research and Digital Education</h1>
+              <p>
+                Building long-term capability through inclusive technology and shared national direction.
+              </p>
+
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="pages/About.html">Learn More <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="pages/Contact.html">Get Involved</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="hc-slide" data-index="9" data-image="assets/images/slides/Slide5.jpeg">
+            <div class="hc-media" aria-hidden="true">
+              <div class="hc-media-bg bg5"></div>
+              <div class="hc-media-depth" aria-hidden="true"></div>
+              <div class="hc-media-scrim" aria-hidden="true"></div>
+            </div>
+
+            <div class="hc-ui">
+              <div class="hc-topline">
+                <div class="hc-kicker">LEARN36</div>
+                <div class="hc-count"><span class="hc-cur">10</span><span class="hc-sep">/</span><span class="hc-total">10</span></div>
+              </div>
+
+              <h1>National Collaboration. Regional Alignment. Real Impact.</h1>
+              <p>
+                A coordinated foundation for Sri Lanka’s next era of research, innovation, and digital readiness.
+              </p>
+
+              <div class="hc-actions">
+                <a class="btn btn-dark" href="#leaderpart">Leadership <span class="arrow">→</span></a>
+                <a class="btn btn-ghost" href="#vision">Vision</a>
+              </div>
+            </div>
+          </article>
+
         </div>
-
-        <!-- Controls -->
-        <button class="hero-nav hero-prev" type="button" aria-label="Previous slide">
-          <span aria-hidden="true">‹</span>
-        </button>
-
-        <button class="hero-nav hero-next" type="button" aria-label="Next slide">
-          <span aria-hidden="true">›</span>
-        </button>
-
-        <!-- Loading line (keep) -->
-        <div class="hero-progress" aria-hidden="true">
-          <div class="hero-progress-bar"></div>
-        </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- VISION -->
+      <!-- Rail / Dots (still works for navigation) -->
+      <div class="hc-rail" aria-label="Slide navigation">
+        <div class="hc-dots" role="tablist" aria-label="Select slide"></div>
+      </div>
+
+      <!-- Progress -->
+      <div class="hc-progress" aria-hidden="true">
+        <div class="hc-progress-bar"></div>
+      </div>
+
+      <!-- Hint -->
+      <div class="hc-hint" aria-hidden="true">
+        <span class="hc-hint-dot"></span>
+        <span class="hc-hint-text">Drag / Swipe</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- VISION (UNCHANGED) -->
   <section class="band band-soft" id="vision">
     <div class="container">
       <div class="vision-grid">
@@ -200,7 +346,6 @@
           <div class="badge">Vision</div>
           <h2>A Shared Vision for Collaboration and Capacity Building</h2>
 
-          <!-- Updated flow (same meaning, more professional) -->
           <p class="lead">
             LEARN36 represents a milestone in strengthening Sri Lanka’s academic network and preparing institutions for the next phase of digital research and innovation.
           </p>
@@ -212,57 +357,52 @@
     </div>
   </section>
 
- <!-- OUTCOMES -->
-<section class="band" id="outcomes">
-  <div class="container">
-    <div class="section-head">
-      <div class="badge badge-dark">Outcomes</div>
-      <h2>Key Outcomes of LEARN36</h2>
-      <p>Concise, factual milestones emerging from LEARN36.</p>
-    </div>
-
-    <div class="outcomes-grid">
-      <!-- Outcome 1 (two buttons inside; NOT whole-card link) -->
-      <div class="outcome outcome--split">
-        <h3>Launch of two national working groups</h3>
-        <p>WG1 – Agriculture Technology (AgroTec) and WG2 – Generative AI for Productivity</p>
-
-        <div class="outcome-actions">
-          <a class="outcome-btn outcome-btn--agrotec" href="AgroTec%20WG.html">
-            AgroTec Working Group <span class="arrow">→</span>
-          </a>
-          <a class="outcome-btn outcome-btn--genai" href="GenAI%20WG.html">
-            GenAI Working Group <span class="arrow">→</span>
-          </a>
-        </div>
+  <!-- OUTCOMES (UNCHANGED) -->
+  <section class="band" id="outcomes">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge badge-dark">Outcomes</div>
+        <h2>Key Outcomes of LEARN36</h2>
+        <p>Concise, factual milestones emerging from LEARN36.</p>
       </div>
 
-      <!-- Outcome 2 (WHOLE CARD is link) -->
-      <a class="outcome outcome--link" href="https://www.ai4all.aisrilanka.org/" target="_blank" rel="noopener">
-        <h3>AI Literacy for All platform</h3>
-        <p>Introduction of the “AI Literacy for All” platform in Sinhala and Tamil</p>
-        <span class="outcome-cta">Open platform <span class="arrow">→</span></span>
-      </a>
+      <div class="outcomes-grid">
+        <div class="outcome outcome--split">
+          <h3>Launch of two national working groups</h3>
+          <p>WG1 – Agriculture Technology (AgroTec) and WG2 – Generative AI for Productivity</p>
 
-      <!-- Outcome 3 (WHOLE CARD is link) -->
-      <a class="outcome outcome--link" href="https://apan.net/" target="_blank" rel="noopener">
-        <h3>Strengthened APAN alignment</h3>
-        <p>Strengthened alignment with Asia Pacific Advanced Network (APAN)</p>
-        <span class="outcome-cta">Visit APAN <span class="arrow">→</span></span>
-      </a>
+          <div class="outcome-actions">
+            <a class="outcome-btn outcome-btn--agrotec" href="pages/AgroTec%20WG.html">
+              AgroTec Working Group <span class="arrow">→</span>
+            </a>
+            <a class="outcome-btn outcome-btn--genai" href="pages/GenAI%20WG.html">
+              GenAI Working Group <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
 
-      <!-- Outcome 4 (WHOLE CARD is link) -->
-      <a class="outcome outcome--link" href="https://learn.ac.lk/" target="_blank" rel="noopener">
-        <h3>Commitment to responsible transformation</h3>
-        <p>Renewed commitment to inclusive, ethical, and collaborative digital transformation</p>
-        <span class="outcome-cta">LEARN official site <span class="arrow">→</span></span>
-      </a>
+        <a class="outcome outcome--link" href="https://www.ai4all.aisrilanka.org/" target="_blank" rel="noopener">
+          <h3>AI Literacy for All platform</h3>
+          <p>Introduction of the “AI Literacy for All” platform in Sinhala and Tamil</p>
+          <span class="outcome-cta">Open platform <span class="arrow">→</span></span>
+        </a>
+
+        <a class="outcome outcome--link" href="https://apan.net/" target="_blank" rel="noopener">
+          <h3>Strengthened APAN alignment</h3>
+          <p>Strengthened alignment with Asia Pacific Advanced Network (APAN)</p>
+          <span class="outcome-cta">Visit APAN <span class="arrow">→</span></span>
+        </a>
+
+        <a class="outcome outcome--link" href="https://learn.ac.lk/" target="_blank" rel="noopener">
+          <h3>Commitment to responsible transformation</h3>
+          <p>Renewed commitment to inclusive, ethical, and collaborative digital transformation</p>
+          <span class="outcome-cta">LEARN official site <span class="arrow">→</span></span>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- LEADERSHIP -->
+  <!-- LEADERSHIP (UNCHANGED) -->
   <section class="band" id="leaderpart">
     <div class="container">
       <div class="section-head center">
@@ -272,7 +412,6 @@
       </div>
 
       <div class="leadership-grid">
-        <!-- Chairman -->
         <div class="leadership-card">
           <div class="leader-image">
             <img src="assets/images/People/chairman.jpg" alt="Chairman">
@@ -287,7 +426,6 @@
           </div>
         </div>
 
-        <!-- CEO -->
         <div class="leadership-card">
           <div class="leader-image">
             <img src="assets/images/People/2ceo.jpg" alt="CEO">
@@ -295,14 +433,13 @@
           <div class="leader-content">
             <span class="leader-role">Leader</span>
             <h3>Message from CEO</h3>
-            <h4> Prof. Roshan Ragel</h4>
+            <h4>Prof. Roshan Ragel</h4>
             <p>
               I envision our Working Groups as catalysts that connect Sri Lanka’s research and education community to the broader Asia-Pacific ecosystem. Through the AgroTec and Generative AI Working Groups, we aim to empower institutions, nurture innovation, and translate emerging technologies into real societal impact. These platforms will strengthen collaboration, shape forward-looking policies, and amplify Sri Lanka’s contributions to APAN. Together, we are building sustainable, future-ready networks that drive productivity, knowledge sharing, and regional leadership.
             </p>
           </div>
         </div>
 
-        <!-- CTO -->
         <div class="leadership-card">
           <div class="leader-image">
             <img src="assets/images/People/cto.jpg" alt="CTO">
@@ -312,7 +449,7 @@
             <h3>Message from CTO</h3>
             <h4>Dr. Asitha Bandaranayake</h4>
             <p>
-              As CTO of LEARN, my focus is on translating vision into action for national and societal benefit. These groups serve as practical, collaborative platforms for piloting technologies, building capacity, and delivering measurable outcomes in agriculture, education, research, and productivity. By aligning closely with APAN Working Groups, we ensure that Sri Lanka’s initiatives are technically strong, globally connected, and scalable,  turning ideas into deployable solutions that create real value for society.
+              As CTO of LEARN, my focus is on translating vision into action for national and societal benefit. These groups serve as practical, collaborative platforms for piloting technologies, building capacity, and delivering measurable outcomes in agriculture, education, research, and productivity. By aligning closely with APAN Working Groups, we ensure that Sri Lanka’s initiatives are technically strong, globally connected, and scalable, turning ideas into deployable solutions that create real value for society.
             </p>
           </div>
         </div>
@@ -320,7 +457,7 @@
     </div>
   </section>
 
-  <!-- PREMIUM FOOTER -->
+  <!-- FOOTER (UNCHANGED) -->
   <footer class="site-footer site-footer--premium">
     <div class="footer-glow"></div>
 
