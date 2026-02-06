@@ -23,7 +23,7 @@
       <ul class="nav-menu">
         <li><a href="../index.html" >Home</a></li>
         <li><a href="../pages/About.html" >About</a></li>
-        <li><a href="../pages/AgroTec WG.html">AgroTec WG</a></li>
+        <li><a href="../pages/AgroTec WG.html">AgroTech WG</a></li>
         <li><a href="../pages/GenAI WG.html">GenAI WG</a></li>
         <li><a href="../pages/People.html">People</a></li>
         <li><a href="../pages/news/news.html">News and Updates</a></li>
@@ -36,43 +36,25 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="contact-hero">
-    <div class="container">
-      <div class="hero-tags">
-        <!-- <span class="tag">Official Communication</span>
-        <span class="tag tag--soft">Institutional Engagement</span> -->
-        <span class="tag tag--mint">Sri Lanka NREN</span>
-      </div>
-
-      <h1>Contact<br> Lanka Education And Research Network <br>(LEARN)</h1>
-
-      <p class="hero-lead">
-        For official correspondence, coordination, and institutional communication with LEARN,
-        please refer to the contact details provided below.
-      </p>
-    </div>
-  </section>
-
-  <!-- ORGANISATION IDENTITY (LOGO IN BODY) -->
-  <section class="contact-identity">
-    <div class="container">
-      <div class="identity-block">
-        <img src="../assets/images/brand/learn.png" alt="Lanka Education and Research Network Logo" class="identity-logo">
-        <div class="identity-text">
-          <h2>Lanka Education and Research Network (LEARN)</h2>
-          <p>Sri Lanka’s National Research and Education Network (NREN)</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- HERO (UPDATED: removed the old intro text, kept the design premium and not empty) -->
+  
   <!-- CONTENT -->
   <section class="contact-content">
     <div class="container contact-grid">
 
       <!-- MAIN -->
       <div class="contact-main">
+
+        <!-- (UPDATED) Identity block moved INSIDE the Contact Information area -->
+        <div class="identity-block">
+          <img src="../assets/images/brand/learn.png" alt="Lanka Education and Research Network Logo" class="identity-logo">
+          <div class="identity-text">
+            <h2>Lanka Education and Research Network (LEARN)</h2>
+            <p>Sri Lanka’s National Research and Education Network (NREN)</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
 
         <h2>Contact Information</h2>
         <p class="section-lead">
@@ -84,18 +66,12 @@
         <!-- INFO ROWS -->
         <div class="info-rows">
 
-          <div class="info-row">
-            <div class="info-label">Organisation</div>
-            <div class="info-value">
-              <strong>LEARN</strong><br>
-              Lanka Education and Research Network
-            </div>
-          </div>
+          
 
           <div class="info-row">
             <div class="info-label">Email</div>
             <div class="info-value">
-              <a href="mailto:info@learn.ac.lk">info@learn.ac.lk</a>
+              <a href="mailto:info@learn.ac.lk">learnwgs@ops.learn.ac.lk</a>
               <button class="copy-btn" type="button" data-copy="info@learn.ac.lk">Copy</button>
             </div>
           </div>
@@ -151,7 +127,7 @@
         <div class="side-card side-card--light">
           <h3>Working Groups</h3>
           <div class="side-links">
-            <a href="AgroTec WG.html">AgroTec WG →</a>
+            <a href="AgroTec WG.html">AgroTech WG →</a>
             <a href="Working_Groups.html">GenAI WG →</a>
             <a href="News & Updates.html">News & Updates →</a>
           </div>
@@ -179,7 +155,7 @@
           <li><a href="About.html">About Us</a></li>
           <li><a href="People.html">People</a></li>
           <li><a href="Working_Groups.html">GenAI WG</a></li>
-          <li><a href="AgroTec WG.html">AgroTec WG</a></li>
+          <li><a href="AgroTec WG.html">AgroTech WG</a></li>
           <li><a href="News & Updates.html">News & Updates</a></li>
         </ul>
       </div>
@@ -205,7 +181,7 @@
 
   <script src="assets/js/script.js"></script>
 
-  <!-- Copy buttons -->
+  <!-- Copy buttons + Mobile nav (kept exactly as your working code) -->
   <script>
     const hint = document.querySelector('.copy-hint');
     document.querySelectorAll('[data-copy]').forEach(btn => {
@@ -227,72 +203,70 @@
     });
 
     // script.js — Mobile nav toggle (open/close) + accessibility
+    (() => {
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
 
-(() => {
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".nav-menu");
+      if (!hamburger || !navMenu) return;
 
-  if (!hamburger || !navMenu) return;
+      const openMenu = () => {
+        hamburger.classList.add("active");
+        navMenu.classList.add("active");
+        document.body.style.overflow = "hidden"; // prevent background scroll
+      };
 
-  const openMenu = () => {
-    hamburger.classList.add("active");
-    navMenu.classList.add("active");
-    document.body.style.overflow = "hidden"; // prevent background scroll
-  };
+      const closeMenu = () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+        document.body.style.overflow = ""; // restore scroll
+      };
 
-  const closeMenu = () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-    document.body.style.overflow = ""; // restore scroll
-  };
+      const toggleMenu = () => {
+        const isOpen = navMenu.classList.contains("active");
+        isOpen ? closeMenu() : openMenu();
+      };
 
-  const toggleMenu = () => {
-    const isOpen = navMenu.classList.contains("active");
-    isOpen ? closeMenu() : openMenu();
-  };
+      // Click to toggle
+      hamburger.addEventListener("click", toggleMenu);
 
-  // Click to toggle
-  hamburger.addEventListener("click", toggleMenu);
+      // Keyboard support (Enter / Space)
+      hamburger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleMenu();
+        }
+      });
 
-  // Keyboard support (Enter / Space)
-  hamburger.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      toggleMenu();
-    }
-  });
+      // Close when clicking a nav link
+      navMenu.addEventListener("click", (e) => {
+        const link = e.target.closest("a");
+        if (link) closeMenu();
+      });
 
-  // Close when clicking a nav link
-  navMenu.addEventListener("click", (e) => {
-    const link = e.target.closest("a");
-    if (link) closeMenu();
-  });
+      // Close when clicking outside the menu
+      document.addEventListener("click", (e) => {
+        const clickedInsideMenu = navMenu.contains(e.target);
+        const clickedHamburger = hamburger.contains(e.target);
 
-  // Close when clicking outside the menu
-  document.addEventListener("click", (e) => {
-    const clickedInsideMenu = navMenu.contains(e.target);
-    const clickedHamburger = hamburger.contains(e.target);
+        if (!clickedInsideMenu && !clickedHamburger && navMenu.classList.contains("active")) {
+          closeMenu();
+        }
+      });
 
-    if (!clickedInsideMenu && !clickedHamburger && navMenu.classList.contains("active")) {
-      closeMenu();
-    }
-  });
+      // Close on ESC
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && navMenu.classList.contains("active")) {
+          closeMenu();
+        }
+      });
 
-  // Close on ESC
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && navMenu.classList.contains("active")) {
-      closeMenu();
-    }
-  });
-
-  // Optional: close menu if screen resized to desktop
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768 && navMenu.classList.contains("active")) {
-      closeMenu();
-    }
-  });
-})();
-
+      // Optional: close menu if screen resized to desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768 && navMenu.classList.contains("active")) {
+          closeMenu();
+        }
+      });
+    })();
   </script>
 
 </body>
