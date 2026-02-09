@@ -278,6 +278,8 @@ body{
   padding: 14px 14px;
 }
 
+
+
 .metric-value{
   font-weight: 800;
   color: var(--green-800);
@@ -313,23 +315,24 @@ body{
 }
 
 .logo-slot{
-  width: 75%;                  /* 🔥 25% smaller */
+  width: 75%;
   aspect-ratio: 1 / 1;
 
   border-radius: 22px;
+
   background: linear-gradient(
-    135deg,
-    rgba(42,124,255,0.12),
-    rgba(230,239,255,0.85)
+    180deg,
+    #f2fbf6 0%,
+    #e6f4ec 100%
   );
-  border: 1px dashed rgba(42,124,255,0.38);
+  border: 1px solid #cfe6d8;   /* solid = institutional */
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 14px;
-  margin: 0 auto;              /* keeps it centered */
+  padding: 16px;
+  margin: 0 auto;
 }
 
 
@@ -1318,5 +1321,139 @@ body{
 @media (min-width: 981px){
   .notice-card{
     margin-top: -1px;   /* pull it up gently */
+  }
+}
+
+
+
+
+
+
+/* Brand lockup row: text + LEARN mark */
+.affiliation{
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;          /* ✅ wraps naturally on small screens */
+  gap: 10px;
+
+  padding-top: 10px;        /* subtle separation from title */
+  border-top: 1px solid rgba(2, 44, 24, 0.10);
+}
+
+.affiliation-text{
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #3b4b42;
+
+  flex: 1 1 260px;          /* ✅ text takes space, wraps when needed */
+  min-width: 220px;
+}
+
+.affiliation-mark{
+  flex: 0 0 auto;           /* ✅ logo stays stable */
+  display: inline-flex;
+  align-items: center;
+}
+
+.affiliation-mark img{
+  height: 44px;             /* bigger, but still “institutional” */
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+/* Mobile tuning: keep it neat */
+@media (max-width: 520px){
+  .affiliation-mark img{
+    height: 36px;
+  }
+}
+
+
+
+
+/* --- Fix: proper spacing inside each metric card (value vs label) --- */
+.metric{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;              /* controls the vertical spacing */
+}
+
+.metric-value{
+  margin-bottom: 0;      /* disable the old 2px margin */
+  line-height: 1.2;
+}
+
+.metric-label{
+  line-height: 1.35;
+}
+
+
+
+.hero-right{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;   /* ✅ THIS is the missing piece */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- AgriTech "About" enhancements (lightweight + consistent) --- */
+.emoji-title{
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.subtitle-strong{
+  font-weight: 700;
+  color: #334155;
+}
+
+/* Why grid (simple, readable, wraps well) */
+.why-grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.why-item{
+  padding: 12px 12px;
+  border-radius: var(--radius-lg);
+  background: rgba(240,253,244,0.72);
+  border: 1px solid rgba(17,138,78,0.14);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 13.8px;
+}
+
+/* Slightly tighter checklist for this block */
+.checklist--compact{
+  gap: 9px;
+}
+
+.split--role{
+  margin-top: 16px;
+}
+
+@media (max-width: 680px){
+  .why-grid{
+    grid-template-columns: 1fr;
   }
 }
