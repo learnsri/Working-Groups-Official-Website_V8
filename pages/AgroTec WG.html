@@ -16,67 +16,117 @@
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo"><h2>AgriTech WG</h2></div>
+              <header class="navbar">
+                <div class="container">
+                  <div class="logo">
+                    <a class="brand" href="../index.html" aria-label="Working Groups Home">
+                      <img src="../assets/images/brand/WorkingGroupLogo.png"
+                          alt="LEARN Working Groups"
+                          class="brand-logo">
+                    </a>
+                  </div>
 
-      <ul class="nav-menu">
-        <li><a href="../index.html" >Home</a></li>
-        <li><a href="../pages/About.html" >About</a></li>
-        <li><a href="../pages/AgroTec WG.html" class="active">AgriTech WG</a></li>
-        <li><a href="../pages/GenAI WG.html">GenAI WG</a></li>
-        <li><a href="../pages/People.html">People</a></li>
-        <li><a href="../pages/news/news.html">News and Updates</a></li>
-        <li><a href="../pages/Contact.html">Contact</a></li>
-      </ul>
+                  <ul class="nav-menu" id="primaryNav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="AgroTec WG.html" class="active">AgriTech WG</a></li>
+                    <li><a href="GenAI WG.html">GenAI WG</a></li>
+                    <li><a href="People.html">People</a></li>
+                    <li><a href="news/news.html">News and Updates</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                  </ul>
 
-      <div class="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </header>
+                  <!-- Overlay inside .container (fixes mobile overlay) -->
+                  <div class="nav-overlay" aria-hidden="true"></div>
 
-  <!-- HERO -->
-  <main>
-    <section class="agrotec-hero">
-      <div class="container hero-grid">
+                  <div class="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+              </header>
 
-        <!-- Left -->
-        <div class="hero-content">
-          
+              <!-- HERO -->
+              <!-- HERO -->
+              <main>
+                <section class="agrotec-hero">
+                  <div class="container hero-grid hero-grid--strict">
 
-          <h1>Digital Agriculture for a Smarter, Climate-Ready Sri Lanka</h1>
-          <p class="hero-lead">
-            AgriTech WG brings together universities, researchers, and practitioners to apply
-            data science, IoT, and AI for agricultural productivity, sustainability, and collaboration—
-            aligned with the APAN framework.
-          </p>
+                    <!-- LEFT COLUMN -->
+                    <div class="hero-left">
 
-          <div class="hero-bottom">
+                      <div class="hero-content">
+                        <h1>Digital Agriculture for a Smarter, Climate-Ready Sri Lanka</h1>
 
-                        <div class="hero-actions">
-                          <a class="btn btn-primary" href="#subgroups">Explore Sub-Groups</a>
-                          <a class="btn btn-ghost" href="#introduction">Read Overview</a>
-                        </div>
+                        <p class="hero-lead">
+                          AgriTech WG brings together universities, researchers, and practitioners to apply
+                          data science, IoT, and AI for agricultural productivity, sustainability, and collaboration—
+                          aligned with the APAN framework.
+                        </p>
 
-                        <div class="hero-metrics">
-                          <div class="metric">
-                            <div class="metric-value">5</div>
-                            <div class="metric-label">Thematic Sub-Groups</div>
+                        <div class="hero-bottom">
+                          <div class="hero-actions">
+                            <a class="btn btn-primary" href="#subgroups">Explore Sub-Groups</a>
+                            <a class="btn btn-ghost" href="#introduction">Read Overview</a>
                           </div>
-                          <div class="metric">
-                            <div class="metric-value">IoT + AI</div>
-                            <div class="metric-label">Core Focus Areas</div>
-                          </div>
-                          <div class="metric">
-                            <div class="metric-value">APAN</div>
-                            <div class="metric-label">Regional Alignment</div>
+
+                          <div class="hero-metrics">
+                            <div class="metric">
+                              <div class="metric-value">5</div>
+                              <div class="metric-label">Thematic Sub-Groups</div>
+                            </div>
+
+                            <div class="metric">
+                              <div class="metric-value">IoT + AI</div>
+                              <div class="metric-label">Core Focus Areas</div>
+                            </div>
+
+                            <div class="metric">
+                              <div class="metric-value">APAN</div>
+                              <div class="metric-label">Regional Alignment</div>
+                            </div>
                           </div>
                         </div>
                       </div>
+
+                      <!-- Leadership (GenAI-style: text, compact, no huge card height) -->
+                      <div class="info-card leadership-info" aria-label="Leadership">
+                        <h4>Leadership</h4>
+
+                        <div class="leadership-profiles">
+
+                          <a class="leader-mini" href="../pages/People.html#asitha" aria-label="Contact Chairperson">
+                            <div class="leader-mini-avatar">
+                              <img src="../assets/images/people/user.png" alt="Prof. Chalinda Beneragama">
+                            </div>
+                            <div class="leader-mini-name">Prof. Chalinda Beneragama</div>
+                            <div class="leader-mini-role">Chairperson</div>
+                          </a>
+
+                          <a class="leader-mini" href="../pages/People.html#asitha" aria-label="Contact Co-Chair">
+                            <div class="leader-mini-avatar">
+                              <img src="../assets/images/people/user.png" alt="Prof. Asanga Ampitiyawaththa">
+                            </div>
+                            <div class="leader-mini-name">Prof. Asanga Ampitiyawaththa</div>
+                            <div class="leader-mini-role">Co-Chair</div>
+                          </a>
+
+                          <a class="leader-mini" href="../pages/People.html#asitha" aria-label="Contact Co-Chair">
+                            <div class="leader-mini-avatar">
+                              <img src="../assets/images/people/user.png" alt="Dr. Nuwan De Silva">
+                            </div>
+                            <div class="leader-mini-name">Dr. Nuwan De Silva</div>
+                            <div class="leader-mini-role">Co-Chair</div>
+                          </a>
+
+                        </div>
                       </div>
 
-                      <!-- Right: Logo + quick facts -->
+
+                    </div>
+
+                    <!-- RIGHT COLUMN -->
+                    <div class="hero-right">
+
                       <div class="logo-card">
                         <div class="logo-slot">
                           <img src="../assets/images/brand/AgroTechLogo.png" alt="AgroTec Working Group Logo" />
@@ -84,6 +134,7 @@
 
                         <div class="logo-caption">
                           <h3>AgriTech Working Group</h3>
+
                           <div class="affiliation" role="group" aria-label="Affiliation with LEARN">
                             <span class="affiliation-text">
                               Under Lanka Education and Research Network (LEARN), Sri Lanka
@@ -93,153 +144,139 @@
                               <img src="../assets/images/brand/learn.png" alt="" />
                             </span>
                           </div>
-
-
-
-                          
                         </div>
                       </div>
 
-
-                        <div class="info-card">
-                          <h4>Leadership</h4>
-                          <div class="info-row">
-                            <span class="label">Chairperson</span>
-                            <span class="value">Prof. Chalinda Beneragama<br>Department of Crop Science<br>Faculty of Agriculture<br> University of Peradeniya of Sri Lanka.</span>
-                          </div>
-                          <div class="info-row">
-                            <span class="label">Co-Chair</span>
-                            <span class="value">Prof. Asanga Ampitiyawaththa<br> Department of Export Agriculture<br> Faculty of Agricultural Sciences<br> Sabaragamuwa University of Sri Lanka.</span>
-                          </div>
-
-                          <div class="info-row">
-                            <span class="label">Co-Chair</span>
-                            <span class="value">Dr. Nuwan De Silva<br>Department of Crop Science<br> Faculty of Agriculture<br> University of Peradeniya of Sri Lanka.</span>
-                          </div>
-
-                          <div class="info-row">
-                            <span class="label">Secretariat</span>
-                            <span class="value">LEARN, Sri Lanka.</span>
-                          </div>
+                      <div class="notice-card">
+                        <div class="notice-icon">🌿</div>
+                        <div class="notice-text">
+                          <strong>Built for collaboration.</strong>
+                          <span>Join discussions, pilots, and shared research initiatives across Sri Lanka and region.</span>
                         </div>
-
-                        <div class="notice-card">
-                          <div class="notice-icon">🌿</div>
-                          <div class="notice-text">
-                            <strong>Built for collaboration.</strong>
-                            <span>Join discussions, pilots, and shared research initiatives across Sri Lanka and region.</span>
-                          </div>
-                        </div>
-                      </aside>
+                      </div>
 
                     </div>
 
-                    <div class="hero-bg"></div>
-                    <div class="hero-grain"></div>
-                  </section>
+                  </div>
 
-                  <!-- CONTENT -->
+                  <div class="hero-bg"></div>
+                  <div class="hero-grain"></div>
+                </section>
+              </main>
+
+
+
+              <!-- FULL-WIDTH STRATEGIC BAND -->
+
+
+
+
                   <section class="content-section" id="introduction">
-                    <div class="container page-grid">
-
-                      <!-- Left rail navigation -->
-                      <nav class="side-nav">
-                        <div class="side-nav-title">On this page</div>
-                        <!-- <a href="#introduction" class="side-link">Introduction</a> -->
-                        <a href="#mission" class="side-link">Mission & Objectives</a>
-                        <a href="#background" class="side-link">Background</a>
-                        <a href="#overview" class="side-link">Overview</a>
-                        
-
-                        <!-- featured, but not loud -->
-                        <a href="#subgroups" class="side-link side-link--featured">
-                          Sub-Groups <span class="side-pill">Explore</span>
-                        </a>
-
-                        <a href="#integration" class="side-link">Integration & Collaboration</a>
-                        <a href="#partnerships" class="side-link">Partnerships</a>
-                        <a href="#ahead" class="side-link">Looking Ahead</a>
-                      </nav>
-
-                      <!-- Main content -->
+                    <div class="container">
                       <div class="content">
 
-                        <section class="section-card" id="about" aria-label="About AgriTech Working Group">
-                <div class="section-head">
-                  <h2><span class="emoji-title">🌱</span> Agriculture Technology Working Group (AgriTech WG)</h2>
-                  <p class="subtitle-strong">Driving Digital Innovation for Sustainable Agriculture in Sri Lanka</p>
-                </div>
+                      <!-- Main content -->
 
-                <div class="prose">
-                  <p>
-                    The Agriculture Technology Working Group (AgriTech WG) was established at LEARN36 as Sri Lanka’s first national platform
-                    dedicated to advancing digital and technology-enabled agriculture.
-                  </p>
-                  <p>
-                    Operating under the Lanka Education and Research Network (LEARN), the working group brings together universities, researchers,
-                    and industry practitioners to apply data science, IoT, and AI in strengthening agricultural productivity, sustainability,
-                    and research collaboration.
-                  </p>
-                  <p>
-                    Aligned with the Asia Pacific Advanced Network (APAN) framework, AgriTech WG connects Sri Lanka’s agricultural research community
-                    with regional and international partners.
-                  </p>
-                </div>
+                                                <section class="section-card" id="about" aria-label="About AgriTech Working Group">
+                                        <div class="section-head">
+                                          <h2><span class="emoji-title">🌱</span> Agriculture Technology Working Group (AgriTech WG)</h2>
+                                          <p class="subtitle-strong">Driving Digital Innovation for Sustainable Agriculture in Sri Lanka</p>
+                                        </div>
 
-                <div class="callout callout--why">
-                  <div class="callout-icon">🌍</div>
-                  <div class="callout-text">
-                    <strong>Why AgriTech WG matters</strong>
-                    <span>
-                      Sri Lanka’s agriculture sector faces climate variability, limited resources, post-harvest losses, and fragmented data systems.
-                      Digital agriculture helps turn constraints into actionable insights and scalable solutions.
-                    </span>
+                                        <div class="prose">
+                                          <p>
+                                            The Agriculture Technology Working Group (AgriTech WG) was established at LEARN36 as Sri Lanka’s first national platform
+                                            dedicated to advancing digital and technology-enabled agriculture.
+                                          </p>
+                                          <p>
+                                            Operating under the Lanka Education and Research Network (LEARN), the working group brings together universities, researchers,
+                                            and industry practitioners to apply data science, IoT, and AI in strengthening agricultural productivity, sustainability,
+                                            and research collaboration.
+                                          </p>
+                                          <p>
+                                            Aligned with the Asia Pacific Advanced Network (APAN) framework, AgriTech WG connects Sri Lanka’s agricultural research community
+                                            with regional and international partners.
+                                          </p>
+                                        </div>
+
+                                        
+
+                                      
+
+                                        <div class="mini-note">
+                                          <div class="mini-note-icon">🤝</div>
+                                          <div>
+                                            Through this platform, members exchange expertise and jointly develop solutions for real-world agricultural challenges.
+                                          </div>
+                                        </div>
+                                      </section>
+
+          
+          <section class="section-card role-card" aria-label="Our Role">
+              <div class="role-card-inner">
+                <h2>Our Role</h2>
+                <p>
+                  AgriTech WG functions as a national forum for collaboration and innovation,
+                  providing a structured platform.
+                </p>
+              </div>
+            </section>
+
+
+          <section class="section-card" id="mission" aria-label="Mission, Objectives, and What We Enable">
+              <div class="section-head">
+                <h2>Mission and Objectives</h2>
+              </div>
+
+              <div class="tri-cards">
+                <!-- What we enable -->
+                <div class="tri-card">
+                  <h3>What we enable</h3>
+                  <ul class="checklist checklist--compact">
+                    <li>Research discussion</li>
+                    <li>Pilot initiatives</li>
+                    <li>Knowledge sharing</li>
+                    <li>Capacity building</li>
+                    <li>Regional engagement</li>
+                  </ul>
+                  <div class="tri-foot">
+                    <span class="tri-chip">Collaboration</span>
+                    <span class="tri-chip">Pilots</span>
+                    <span class="tri-chip">Capacity</span>
                   </div>
                 </div>
 
-                <div class="why-grid">
-                  <div class="why-item">✅ Better decision-making</div>
-                  <div class="why-item">✅ Reduced waste</div>
-                  <div class="why-item">✅ Climate resilience</div>
-                  <div class="why-item">✅ Stronger research collaboration</div>
-                  <div class="why-item">✅ Sustainable farming practices</div>
-                </div>
-
-                <div class="prose">
+                <!-- Mission -->
+                <div class="tri-card">
+                  <h3>Mission</h3>
                   <p>
-                    AgriTech WG was formed following a national workshop involving academics, researchers, and industry experts to identify priorities
-                    and research gaps and to define a coordinated national approach.
+                    To support interdisciplinary research and collaboration in agriculture through the application of digital technologies.
                   </p>
-                </div>
 
-                <div class="split split--role">
-                  <div class="panel">
-                    <h3>Our Role</h3>
-                    <p>
-                      AgriTech WG functions as a national forum for collaboration and innovation—providing a structured platform for coordinated
-                      action and shared outcomes.
-                    </p>
-                  </div>
-
-                  <div class="panel">
-                    <h3>What we enable</h3>
-                    <ul class="checklist checklist--compact">
-                      <li>Research discussion</li>
-                      <li>Pilot initiatives</li>
-                      <li>Knowledge sharing</li>
-                      <li>Capacity building</li>
-                      <li>Regional engagement</li>
-                    </ul>
+                  <div class="tri-foot">
+                    <span class="tri-chip">Interdisciplinary</span>
+                    <span class="tri-chip">Digital agriculture</span>
                   </div>
                 </div>
 
-                <div class="mini-note">
-                  <div class="mini-note-icon">🤝</div>
-                  <div>
-                    Through this platform, members exchange expertise and jointly develop solutions for real-world agricultural challenges.
-                  </div>
+                <!-- Objectives -->
+                <div class="tri-card">
+                  <h3>Objectives</h3>
+                  <ul class="checklist">
+                    <li>Support research and knowledge sharing in areas such as precision agriculture, data analytics, and agri-supply-chain management</li>
+                    <li>Facilitate collaboration among Sri Lankan institutions and regional partners through APAN</li>
+                    <li>Develop and publish a working group charter, terms of reference, and a project roadmap</li>
+                    <li>Initiate pilot projects and conduct regular meetings and knowledge-sharing sessions</li>
+                    <li>Establish mechanisms for ongoing collaboration and data exchange among members</li>
+                  </ul>
                 </div>
-              </section>
+              </div>
+            </section>
+
+            
+
+
+
 
 
           <!-- <section class="section-card" aria-label="Introduction">
@@ -270,11 +307,12 @@
             </div>
           </section> -->
 
-          <section class="section-card" id="mission" aria-label="Mission and Objectives">
+          <!-- <section class="section-card" id="mission" aria-label="Mission and Objectives">
             <div class="section-head">
               <h2>Mission and Objectives</h2>
               <p>Clear direction, practical outcomes, and long-term coordination.</p>
             </div>
+            
 
             <div class="split">
               <div class="panel">
@@ -295,89 +333,8 @@
                 </ul>
               </div>
             </div>
-          </section>
+          </section> -->
 
-          <section class="section-card" id="background" aria-label="Background">
-            <div class="section-head">
-              <h2>Background</h2>
-              <p>
-                Sri Lanka’s agriculture faces real-world constraints. Digital agriculture helps transform constraints into
-                actionable insight and scalable solutions.
-              </p>
-            </div>
-
-            <div class="prose">
-              <p>
-                Agriculture plays a significant role in Sri Lanka’s economy and supports a large portion of the population.
-                However, the sector faces ongoing challenges such as climate variability, resource constraints, post-harvest
-                losses, and fragmented data systems.
-              </p>
-              <p>
-                In response, LEARN initiated the AgriTech WG to support a coordinated approach to digital agriculture research.
-                The working group was formed following a two-day national workshop attended by academics, researchers, and
-                industry professionals. Participants discussed national priorities, identified research gaps, and contributed
-                to defining the scope and structure of the working group.
-              </p>
-              <p>
-                AgriTech WG serves as a link between agricultural research activities in Sri Lanka and regional research
-                communities within APAN—particularly in areas related to agriculture, IoT, and open data.
-              </p>
-            </div>
-
-            <div class="callout">
-              <div class="callout-icon">📌</div>
-              <div class="callout-text">
-                <strong>Why it matters:</strong>
-                <span>Better decisions, less waste, resilient farming, and stronger research collaboration.</span>
-              </div>
-            </div>
-          </section>
-
-          <section class="section-card" id="overview" aria-label="Overview">
-            <div class="section-head">
-              <h2>Overview</h2>
-              <p>
-                A national forum for research and collaboration—built with structure, focus areas, and shared outcomes.
-              </p>
-            </div>
-
-            <div class="prose">
-              <p>
-                The Agriculture Technology Working Group (AgriTech WG) functions as a national forum for research and collaboration
-                on digital agriculture. Established under LEARN, the working group brings together expertise from universities,
-                research institutions, and related organisations to explore the application of digital technologies in agriculture.
-              </p>
-              <p>
-                AgriTech WG is organised into five thematic sub-groups, each addressing a specific area of agriculture technology
-                identified during the formation workshop. These sub-groups provide a structured approach to research discussion,
-                pilot activities, and knowledge sharing.
-              </p>
-            </div>
-
-            <div class="highlight-grid">
-              <div class="highlight">
-                <div class="highlight-icon">🛰️</div>
-                <div>
-                  <h4>Data & Remote Sensing</h4>
-                  <p>Satellite imagery + field data for insight and planning.</p>
-                </div>
-              </div>
-              <div class="highlight">
-                <div class="highlight-icon">📡</div>
-                <div>
-                  <h4>IoT for Monitoring</h4>
-                  <p>Real-time sensing across production, storage, and transport.</p>
-                </div>
-              </div>
-              <div class="highlight">
-                <div class="highlight-icon">🤖</div>
-                <div>
-                  <h4>AI Decision Support</h4>
-                  <p>Prediction, optimization, and tools for smarter action.</p>
-                </div>
-              </div>
-            </div>
-          </section>
 
           
 
@@ -407,8 +364,7 @@
                     <div class="subgroup-text">
                       <h3>Coming soon →</h3>
                       <p>
-                        This sub-group is currently under development.
-Its focus area and activities will be announced once finalized.
+                        This sub-group is currently under development.Its focus area and activities will be announced once finalized.
                       </p>
                     </div>
                   </div>
@@ -432,8 +388,7 @@ Its focus area and activities will be announced once finalized.
                     <div class="subgroup-text">
                       <h3>Coming soon →</h3>
                       <p>
-                        This sub-group is currently under development.
-Its focus area and activities will be announced once finalized.
+                        This sub-group is currently under development. Its focus area and activities will be announced once finalized.
                       </p>
                     </div>
                   </div>
@@ -457,8 +412,7 @@ Its focus area and activities will be announced once finalized.
                     <div class="subgroup-text">
                       <h3>Coming soon →</h3>
                       <p>
-                        This sub-group is currently under development.
-Its focus area and activities will be announced once finalized.
+                        This sub-group is currently under development. Its focus area and activities will be announced once finalized.
                       </p>
                     </div>
                   </div>
@@ -482,8 +436,7 @@ Its focus area and activities will be announced once finalized.
                     <div class="subgroup-text">
                       <h3>Coming soon →</h3>
                       <p>
-                       This sub-group is currently under development.
-Its focus area and activities will be announced once finalized.
+                       This sub-group is currently under development. Its focus area and activities will be announced once finalized.
                       </p>
                     </div>
                   </div>
@@ -507,8 +460,7 @@ Its focus area and activities will be announced once finalized.
                     <div class="subgroup-text">
                       <h3>Coming soon →</h3>
                       <p>
-                        This sub-group is currently under development.
-Its focus area and activities will be announced once finalized.
+                        This sub-group is currently under development. Its focus area and activities will be announced once finalized.
                       </p>
                     </div>
                   </div>
@@ -524,45 +476,56 @@ Its focus area and activities will be announced once finalized.
             </div>
           </section>
 
-          <section class="section-card" id="integration" aria-label="Integration with AI and Collaboration">
+         
+
+          <!-- WHY + ROLE CARD -->
+          <section class="section-card">
+
+            <!-- WHY IT MATTERS -->
             <div class="section-head">
-              <h2>Integration with AI and Collaboration</h2>
-              <p>AI is applied across prediction, monitoring, and decision-support—and strengthened through collaboration.</p>
+              <h2><span class="emoji-title">🌍</span> Why AgriTech WG Matters</h2>
             </div>
 
             <div class="prose">
               <p>
-                Artificial Intelligence is considered across the thematic areas of AgriTech WG, including data analysis, prediction, monitoring,
-                and decision-support applications. AgriTech WG also collaborates with the GenAI Working Group to explore intersections between
-                generative AI research and agricultural applications, as discussed during LEARN36.
+                Sri Lanka’s agriculture sector faces major challenges, including climate variability,
+                limited resources, post-harvest losses, and fragmented data systems.
               </p>
               <p>
-                The working group has agreed to conduct regular meetings each year to review progress, share findings, and coordinate activities across sub-groups.
+                Digital agriculture transforms these constraints into actionable insights and scalable solutions—supporting:
               </p>
             </div>
-          </section>
 
-          <section class="section-card" id="partnerships" aria-label="Partnerships and Regional Engagement">
-            <div class="section-head">
-              <h2>Partnerships and Regional Engagement</h2>
-              <p>Aligned to regional standards and collaboration opportunities across the Asia-Pacific.</p>
+            <div class="why-grid">
+              <div class="why-item">✅ Better decision-making</div>
+              <div class="why-item">✅ Reduced waste</div>
+              <div class="why-item">✅ Climate resilience</div>
+              <div class="why-item">✅ Stronger research collaboration</div>
+              <div class="why-item">✅ Sustainable farming practices</div>
             </div>
 
             <div class="prose">
               <p>
-                AgriTech WG engages with APAN and its related working groups, including those focused on open data and IoT.
-                These engagements support alignment with regional research practices and provide opportunities for Sri Lankan
-                researchers to participate in collaborative activities across the Asia-Pacific region.
+                AgriTech WG was formed following a national workshop involving academics, researchers,
+                and industry experts to identify priorities and research gaps and to define a coordinated
+                national approach.
               </p>
             </div>
 
-            <div class="pill-row">
-              <span class="pill-soft">APAN Alignment</span>
-              <span class="pill-soft">Open Data</span>
-              <span class="pill-soft">IoT Ecosystems</span>
-              <span class="pill-soft">Regional Collaboration</span>
+            <!-- OUR ROLE -->
+            
+
+            <div class="mini-note">
+              <div class="mini-note-icon">🤝</div>
+              <div>
+                Through this platform, members exchange expertise and jointly develop
+                solutions for real-world agricultural challenges.
+              </div>
             </div>
+
           </section>
+
+
 
           <section class="section-card" id="ahead" aria-label="Looking Ahead">
             <div class="section-head">

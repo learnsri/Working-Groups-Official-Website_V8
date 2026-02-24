@@ -15,11 +15,20 @@
 
 <body>
   <!-- NAV (UNCHANGED) -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo"><h2>Working Groups</h2></div>
+<header class="navbar" id="siteNav">
+  <div class="container nav-inner">
 
-      <ul class="nav-menu" id="primaryNav">
+    <!-- Logo -->
+    <a href="index.html" class="brand" aria-label="Working Groups Home">
+      <img
+        src="assets/images/brand/withbackgroundWorkingGroupLogo.png"
+        alt="Working Groups Logo"
+      />
+    </a>
+
+    <!-- Desktop Nav (stays inside the card) -->
+    <nav class="nav-wrap nav-desktop" aria-label="Primary">
+      <ul class="nav-menu nav-menu--desktop">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="pages/About.html">About</a></li>
         <li><a href="pages/AgroTec WG.html">AgriTech WG</a></li>
@@ -28,14 +37,40 @@
         <li><a href="pages/news/news.html">News and Updates</a></li>
         <li><a href="pages/Contact.html">Contact</a></li>
       </ul>
+    </nav>
 
-      <div class="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
+    <!-- Hamburger -->
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="primaryNav"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
-    <div class="nav-overlay" aria-hidden="true"></div>
-  </header>
+  <!-- Mobile Drawer (OUTSIDE the card, pinned to page border) -->
+  <nav class="nav-mobile" aria-label="Mobile Primary">
+  <ul class="nav-menu nav-menu--mobile" id="primaryNav">
+
+    <!-- CLOSE BUTTON -->
+    <button class="nav-close" aria-label="Close menu">&times;</button>
+
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="pages/About.html">About</a></li>
+    <li><a href="pages/AgroTec WG.html">AgriTech WG</a></li>
+    <li><a href="pages/GenAI WG.html">GenAI WG</a></li>
+    <li><a href="pages/People.html">People</a></li>
+    <li><a href="pages/news/news.html">News and Updates</a></li>
+    <li><a href="pages/Contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+  <!-- Overlay (also OUTSIDE the card) -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+</header>
 
  <!-- =========================================================
      HERO CINEMATIC SLIDER (ARROWS REMOVED)
@@ -320,20 +355,20 @@
       </div>
 
       <!-- Rail / Dots (still works for navigation) -->
-      <div class="hc-rail" aria-label="Slide navigation">
+      <!-- <div class="hc-rail" aria-label="Slide navigation">
         <div class="hc-dots" role="tablist" aria-label="Select slide"></div>
-      </div>
+      </div> -->
 
       <!-- Progress -->
-      <div class="hc-progress" aria-hidden="true">
+      <!-- <div class="hc-progress" aria-hidden="true">
         <div class="hc-progress-bar"></div>
-      </div>
+      </div> -->
 
       <!-- Hint -->
-      <div class="hc-hint" aria-hidden="true">
+      <!-- <div class="hc-hint" aria-hidden="true">
         <span class="hc-hint-dot"></span>
         <span class="hc-hint-text">Drag / Swipe</span>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -342,68 +377,159 @@
 
 
   <!-- VISION (UNCHANGED) -->
-  <section class="band band-soft" id="vision">
-    <div class="container">
-      <div class="vision-grid">
-        <div class="vision-text">
-          <div class="badge">Vision</div>
-          <h2>A Shared Vision for Collaboration and Capacity Building</h2>
 
-          <p class="lead">
-            LEARN36 represents a milestone in strengthening Sri Lanka’s academic network and preparing institutions for the next phase of digital research and innovation.
-          </p>
-          <p>
-            Through its national initiatives, LEARN continues to promote collaboration, responsible technology adoption, and inclusive capacity building. By connecting institutions and aligning with regional frameworks such as APAN, LEARN supports educators, researchers, and policy makers in addressing both the opportunities and challenges of the digital era.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- OUTCOMES (UNCHANGED) -->
-  <section class="band" id="outcomes">
-    <div class="container">
-      <div class="section-head">
-        <div class="badge badge-dark">Outcomes</div>
-        <h2>Key Outcomes of LEARN36</h2>
-        <p>Concise, factual milestones emerging from LEARN36.</p>
-      </div>
+  
 
-      <div class="outcomes-grid">
-        <div class="outcome outcome--split">
-          <h3>Launch of two national working groups</h3>
-          <p>WG1 – Agriculture Technology (AgriTech) and WG2 – Generative AI for Productivity</p>
+            <section class="band band-soft" id="vision">
+              <div class="container">
+                <div class="vision-grid">
+                  <div class="vision-text">
+                    <div class="badge">Vision</div>
+                    <h2>A Shared Vision for Collaboration and Capacity Building</h2>
 
-          <div class="outcome-actions">
-            <a class="outcome-btn outcome-btn--agrotec" href="pages/AgroTec%20WG.html">
-              AgriTech Working Group <span class="arrow">→</span>
-            </a>
-            <a class="outcome-btn outcome-btn--genai" href="pages/GenAI%20WG.html">
-              GenAI Working Group <span class="arrow">→</span>
-            </a>
-          </div>
-        </div>
+                      <p class="lead">
+                        LEARN36 marked a major milestone in strengthening Sri Lanka’s academic and research network for the digital future.
+                      </p>
 
-        <a class="outcome outcome--link" href="https://www.ai4all.aisrilanka.org/" target="_blank" rel="noopener">
-          <h3>AI Literacy for All platform</h3>
-          <p>Introduction of the “AI Literacy for All” platform in Sinhala and Tamil</p>
-          <span class="outcome-cta">Open platform <span class="arrow">→</span></span>
-        </a>
+                      <p>
+                        Launched at the 36th Annual General Meeting of the Lanka Education And Research Network (LEARN), the LEARN Working Groups Platform represents a strategic shift from isolated efforts to coordinated, outcome-driven national collaboration.
+                      
+                        The platform is designed to strengthen collaboration, coordination, and capacity-building across Sri Lanka’s higher education and research ecosystem. It brings together universities, researchers, policymakers, industry partners, and international collaborators to address priority national challenges through focused and measurable initiatives.
+                    
+                        Through national and regional engagement, including alignment with the Asia Pacific Advanced Network (APAN), LEARN promotes responsible technology adoption, digital transformation, and inclusive innovation.
+                    
+                        Together, the LEARN Working Groups drive structured collaboration, shared expertise, and sustainable national impact.
+                      </p>
 
-        <a class="outcome outcome--link" href="https://apan.net/" target="_blank" rel="noopener">
-          <h3>Strengthened APAN alignment</h3>
-          <p>Strengthened alignment with Asia Pacific Advanced Network (APAN)</p>
-          <span class="outcome-cta">Visit APAN <span class="arrow">→</span></span>
-        </a>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-        <a class="outcome outcome--link" href="https://learn.ac.lk/" target="_blank" rel="noopener">
-          <h3>Commitment to responsible transformation</h3>
-          <p>Renewed commitment to inclusive, ethical, and collaborative digital transformation</p>
-          <span class="outcome-cta">LEARN official site <span class="arrow">→</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
+
+
+
+              <!-- STRATEGIC SHIFT -->
+            <section class="band" id="strategic-shift">
+              <div class="container">
+
+                <div class="section-head center">
+                  <div class="badge badge-dark">Platform</div>
+                  <h2>Strategic shift</h2>
+                  <p>
+                    A deliberate move from ad-hoc or isolated projects to coordinated, outcome-driven collaboration.
+                    This approach helps institutions align priorities, share capability, and deliver results that can scale.
+                  </p>
+                </div>
+
+                <div class="shift-grid-home">
+
+                  <div class="shift-card-home">
+                    <span class="shift-dot-home"></span>
+                    <div class="shift-copy-home">
+                      <h3>Digital transformation</h3>
+                      <p>Modernizing systems, services, and research infrastructure</p>
+                    </div>
+                  </div>
+
+                  <div class="shift-card-home shift-card-home--mint">
+                    <span class="shift-dot-home shift-dot-home--mint"></span>
+                    <div class="shift-copy-home">
+                      <h3>Responsible AI adoption</h3>
+                      <p>Safe, productive, and ethical AI usage across sectors</p>
+                    </div>
+                  </div>
+
+                  <div class="shift-card-home shift-card-home--soft">
+                    <span class="shift-dot-home shift-dot-home--soft"></span>
+                    <div class="shift-copy-home">
+                      <h3>Sustainability</h3>
+                      <p>Solutions designed for long-term national impact</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+
+                        <!-- STRATEGIC DIRECTION + REGIONAL ALIGNMENT -->
+                        <!-- STRATEGIC DIRECTION + REGIONAL ALIGNMENT (PREMIUM) -->
+                        <section class="band band-soft" id="alignment">
+                          <div class="container">
+                            <div class="align-shell">
+
+                              <!-- Left: feature panel -->
+                              <div class="align-feature">
+                                <div class="align-kicker">
+                                  <span class="align-tag align-tag--learn">LEARN-led</span>
+                                  <span class="align-tag align-tag--apan">APAN-aligned</span>
+                                  <span class="align-tag">National + Regional</span>
+                                </div>
+
+                                <h2>Strategic Direction and Regional Alignment</h2>
+
+                                <p class="align-lead">
+                                  Led by the Lanka Education and Research Network (LEARN) and aligned with the Asia Pacific Advanced Network (APAN),
+                                  the Working Groups Platform supports coordinated national and regional collaboration to strengthen Sri Lanka’s
+                                  higher education and research ecosystem.
+                                </p>
+
+                                <div class="align-statement">
+                                  <p>
+                                    Through structured governance, shared expertise, and regional engagement, the platform enables institutions to
+                                    address emerging challenges and deliver sustainable, scalable solutions.
+                                  </p>
+                                </div>
+
+                                <div class="align-metrics" aria-label="Key themes">
+                                  <div class="align-metric">
+                                    <span class="align-metric-top">Governance</span>
+                                    <span class="align-metric-sub">Structured coordination</span>
+                                  </div>
+                                  <div class="align-metric">
+                                    <span class="align-metric-top">Expertise</span>
+                                    <span class="align-metric-sub">Shared capability</span>
+                                  </div>
+                                  <div class="align-metric">
+                                    <span class="align-metric-top">Engagement</span>
+                                    <span class="align-metric-sub">Regional pathways</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Right: capability tiles -->
+                              <div class="align-tiles" aria-label="What this enables">
+                                <div class="align-tile">
+                                  <div class="align-tile-ico" aria-hidden="true">◎</div>
+                                  <div class="align-tile-body">
+                                    <h3>Coordinated national priorities</h3>
+                                    <p>Moves from isolated projects to shared agendas that institutions can adopt and scale.</p>
+                                  </div>
+                                </div>
+
+                                <div class="align-tile">
+                                  <div class="align-tile-ico" aria-hidden="true">↔</div>
+                                  <div class="align-tile-body">
+                                    <h3>Regional collaboration pathways</h3>
+                                    <p>Enables cross-border partnership, shared infrastructure, and regional learning loops.</p>
+                                  </div>
+                                </div>
+
+                                <div class="align-tile">
+                                  <div class="align-tile-ico" aria-hidden="true">✓</div>
+                                  <div class="align-tile-body">
+                                    <h3>Sustainable, scalable outcomes</h3>
+                                    <p>Turns collaboration into measurable outputs—pilots, guidance, and long-term capability.</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </section>
+
 
   <!-- LEADERSHIP (UNCHANGED) -->
   <section class="band" id="leaderpart">
@@ -459,6 +585,9 @@
       </div>
     </div>
   </section>
+
+
+
 
   <!-- FOOTER (UNCHANGED) -->
   <footer class="site-footer site-footer--premium">

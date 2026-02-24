@@ -16,25 +16,34 @@
 <body>
 
   <!-- Header -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo"><h2>About Us</h2></div>
-
-      <ul class="nav-menu">
-        <li><a href="../index.html" >Home</a></li>
-        <li><a href="../pages/About.html" class="active">About</a></li>
-        <li><a href="../pages/AgroTec WG.html">AgriTech WG</a></li>
-        <li><a href="../pages/GenAI WG.html">GenAI WG</a></li>
-        <li><a href="../pages/People.html">People</a></li>
-        <li><a href="../pages/news/news.html">News and Updates</a></li>
-        <li><a href="../pages/Contact.html">Contact</a></li>
-      </ul>
-
-      <div class="hamburger" aria-label="Open menu" tabindex="0">
-        <span></span><span></span><span></span>
-      </div>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <a class="brand" href="../index.html" aria-label="Working Groups Home">
+        <img src="../assets/images/brand/WorkingGroupLogo.png"
+             alt="LEARN Working Groups"
+             class="brand-logo">
+      </a>
     </div>
-  </header>
+
+    <ul class="nav-menu" id="primaryNav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="About.html" class="active">About</a></li>
+      <li><a href="AgroTec WG.html">AgriTech WG</a></li>
+      <li><a href="GenAI WG.html">GenAI WG</a></li>
+      <li><a href="People.html">People</a></li>
+      <li><a href="news/news.html">News and Updates</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Overlay moved INSIDE .container, after the menu -->
+    <div class="nav-overlay" aria-hidden="true"></div>
+
+    <div class="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
 
   <!-- HERO (CLEAN) -->
   <section class="about-hero">
@@ -83,7 +92,7 @@
         <div class="divider"></div>
 
         <!-- Strategic shift -->
-        <div class="section-block">
+        <!-- <div class="section-block">
           <div class="section-head">
             <h2>Strategic shift</h2>
           </div>
@@ -118,11 +127,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+<!-- 
+        <div class="divider"></div> -->
 
-        <div class="divider"></div>
-
-        <div class="section-block">
+        <!-- <div class="section-block">
           <div class="section-head">
             <h2>National Working Groups</h2>
           </div>
@@ -162,9 +171,9 @@
               <span class="wg-arrow" aria-hidden="true">→</span>
             </a>
           </div>
-        </div>
-
-        <div class="divider"></div>
+        </div> -->
+<!-- 
+        <div class="divider"></div> -->
 
         <div class="section-block">
           <div class="split">

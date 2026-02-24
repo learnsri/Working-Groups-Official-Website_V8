@@ -20,13 +20,15 @@
   --ice-100:#e6efff;
 
   --card:#ffffff;
-  --border: rgba(6, 24, 60, 0.12);
+  --border: rgba(15, 23, 42, 0.14);
 
-  --shadow: 0 16px 40px rgba(6, 24, 60, 0.10);
-  --shadow-soft: 0 10px 24px rgba(6, 24, 60, 0.08);
 
-  --radius-xl: 22px;
-  --radius-lg: 16px;
+  --shadow: 0 18px 38px rgba(15,23,42,0.12);
+  --shadow-soft: 0 12px 26px rgba(15,23,42,0.10);
+
+
+  --radius-xl: 20px;
+  --radius-lg: 14px;
   --radius-md: 12px;
 
   --accent: var(--blue-650);
@@ -45,8 +47,8 @@ body{
 }
 
 .container{
-  width: 90%;
-  max-width: 1200px;
+  width: 97%;
+  max-width: 1340px;   /* was 1200px */
   margin: 0 auto;
 }
 
@@ -355,24 +357,27 @@ body{
 }
 
 .logo-slot{
-  width: 75%;                  /* 🔥 25% smaller */
+  width: 78%;              /* bigger like AgriTech */
   aspect-ratio: 1 / 1;
 
-  border-radius: 22px;
+  border-radius: 18px;     /* tighter corners */
+
   background: linear-gradient(
     135deg,
-    rgba(42,124,255,0.12),
-    rgba(230,239,255,0.85)
+    rgba(42,124,255,0.10),
+    rgba(230,239,255,0.90)
   );
-  border: 1px dashed rgba(42,124,255,0.38);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px dashed rgba(42,124,255,0.40);
 
-  padding: 14px;
-  margin: 0 auto;              /* keeps it centered */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding: 16px;
+  margin: 0 auto;
 }
+
 
 
 
@@ -395,8 +400,9 @@ body{
 }
 
 .info-card{
-  padding: 18px 18px 16px;
+  padding: 20px;
 }
+
 
 .info-card h4{
   font-size: 15px;
@@ -1195,12 +1201,6 @@ body{
    HERO — tighten logo → notice relationship
 ========================= */
 
-@media (min-width: 981px){
-  .notice-card{
-    margin-top: -65px;   /* pull it up gently */
-  }
-}
-
 
 
 
@@ -1228,7 +1228,8 @@ body{
   gap: 10px;
 
   padding-top: 10px;        /* subtle separation from title */
-  border-top: 1px solid rgba(2, 44, 24, 0.10);
+  border-top: 1px solid rgba(15,23,42,0.10);
+
 }
 
 .affiliation-text{
@@ -1257,5 +1258,845 @@ body{
 @media (max-width: 520px){
   .affiliation-mark img{
     height: 36px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   Our Role (Blue statement card)
+========================= */
+.role-card-blue{
+  margin-top: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(42,124,255,0.12),
+    rgba(230,239,255,0.85)
+  );
+  border: 1px solid rgba(42,124,255,0.22);
+  box-shadow: 0 14px 30px rgba(6,24,60,0.06);
+}
+
+.role-card-blue .role-card-inner{
+  max-width: 900px;
+}
+
+.role-card-blue h2{
+  font-size: 20px;
+  color: var(--blue-950);
+  margin-bottom: 8px;
+}
+
+.role-card-blue p{
+  font-size: 15.5px;
+  font-weight: 650;
+  color: #0f172a;
+  line-height: 1.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   BLUE THEME OVERRIDES (Fix accidental green styles)
+   Paste at VERY END of GenAI WG.css
+===================================================== */
+
+/* Pills */
+.pill-soft{
+  background: rgba(42,124,255,0.10);
+  border: 1px solid rgba(42,124,255,0.16);
+  color: var(--blue-850);
+  font-weight: 800;
+}
+
+/* Mini note */
+.mini-note{
+  background: linear-gradient(90deg, rgba(42,124,255,0.12), rgba(230,239,255,0.75));
+  border: 1px solid rgba(42,124,255,0.18);
+}
+
+.mini-note-icon{
+  background: rgba(42,124,255,0.12);
+  border: 1px solid rgba(42,124,255,0.18);
+}
+
+/* Why grid items */
+.why-item{
+  background: rgba(230,239,255,0.65);
+  border: 1px solid rgba(42,124,255,0.16);
+}
+
+/* Tri-cards (Mission/Objectives/What we enable) */
+.tri-card{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(42,124,255,0.16);
+  box-shadow: 0 10px 22px rgba(6,24,60,0.06);
+}
+
+.tri-card h3{
+  color: var(--blue-950);
+}
+
+.checklist li::before{
+  background: rgba(42,124,255,0.14);
+  border: 1px solid rgba(42,124,255,0.18);
+  color: var(--blue-850);
+}
+
+/* Tri chips */
+.tri-chip{
+  background: rgba(42,124,255,0.10);
+  border: 1px solid rgba(42,124,255,0.16);
+  color: rgba(7,18,42,0.92);
+}
+
+/* Optional: compact list spacing */
+.checklist--compact{ gap: 9px; }
+
+/* Looking Ahead banner (you used .cta-banner in HTML) */
+.cta-banner{
+  margin-top: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 14px;
+  padding: 14px 14px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(90deg, rgba(42,124,255,0.12), rgba(230,239,255,0.80));
+  border: 1px solid rgba(42,124,255,0.18);
+}
+
+.cta-text h3{
+  font-size: 16px;
+  color: var(--blue-950);
+  margin-bottom: 4px;
+}
+
+.cta-text p{
+  font-size: 13.8px;
+  color: #475569;
+  font-weight: 650;
+}
+
+@media (max-width: 680px){
+  .cta-banner{ flex-direction: column; align-items: flex-start; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   TRI-CARDS GRID SYSTEM (required by HTML)
+===================================================== */
+
+.tri-cards{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+.tri-card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 260px;
+  border-radius: var(--radius-xl);
+  padding: 16px 16px;
+}
+
+.tri-foot{
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(15,23,42,0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 980px){
+  .tri-cards{ grid-template-columns: 1fr; }
+}
+
+@media (min-width: 981px) and (max-width: 1200px){
+  .tri-cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   Leadership mini profiles (AgriTech-style) — BLUE
+   Paste at END of GenAI WG.css
+===================================================== */
+
+.leadership-info h4{
+  margin-bottom: 10px;
+}
+
+.leadership-profiles{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+  text-align: center;
+  margin-bottom: 12px; /* space before the info rows */
+}
+
+/* Each mini profile tile */
+.leader-mini{
+  text-decoration: none;
+  color: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 8px;
+  border-radius: 18px;
+
+  background: rgba(230,239,255,0.65);
+  border: 1px solid rgba(42,124,255,0.16);
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border 0.18s ease, background 0.18s ease;
+}
+
+.leader-mini:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(6,24,60,0.10);
+  border: 1px solid rgba(27,91,214,0.22);
+  background: rgba(230,239,255,0.85);
+}
+
+.leader-mini:focus-visible{
+  outline: none;
+  box-shadow:
+    0 14px 28px rgba(6,24,60,0.10),
+    0 0 0 4px rgba(27,91,214,0.18);
+}
+
+/* Avatar */
+.leader-mini-avatar{
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid rgba(15,23,42,0.10);
+  box-shadow: 0 12px 22px rgba(6,24,60,0.08);
+}
+
+.leader-mini-avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Name + role */
+.leader-mini-name{
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 1.25;
+  color: #0f172a;
+}
+
+.leader-mini-role{
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--blue-650);
+  letter-spacing: 0.2px;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 980px){
+  .leadership-profiles{
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .leader-mini{
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .leader-mini-avatar{
+    width: 58px;
+    height: 58px;
+    flex: 0 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   HERO TUNING — size + composition (paste at END)
+===================================================== */
+
+/* Slightly reduce hero vertical height */
+.genai-hero{
+  padding: 56px 0 34px; /* was 68px 0 42px */
+}
+
+/* Left hero card: reduce padding */
+.hero-content{
+  padding: 30px 30px;
+}
+
+
+/* Title & lead: make it tighter and more readable */
+.hero-content h1{
+  font-size: 40px;      /* was 44px */
+  line-height: 1.12;
+  letter-spacing: -0.35px;
+  margin-bottom: 10px;
+}
+
+.hero-lead{
+  font-size: 15.8px;    /* was 16.5px */
+  line-height: 1.65;
+  max-width: 70ch;
+}
+
+/* Buttons: slightly smaller for balance */
+.btn{
+  padding: 11px 15px;   /* was 12px 16px */
+  border-radius: 13px;
+  font-size: 14px;
+}
+
+/* Metrics: tighter + nicer proportions */
+.hero-metrics{
+  gap: 10px;            /* was 12px */
+}
+
+.metric{
+  padding: 12px 12px;   /* was 14px 14px */
+}
+
+.metric-value{
+  font-size: 17px;      /* was 18px */
+}
+
+.metric-label{
+  font-size: 12.2px;    /* was 12.5px */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   WHY IT MATTERS — Blue boxed grid (FIX)
+===================================================== */
+
+.why-grid{
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.why-item{
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+
+  background: linear-gradient(
+    135deg,
+    rgba(42,124,255,0.12),
+    rgba(230,239,255,0.85)
+  );
+
+  border: 1px solid rgba(42,124,255,0.18);
+  box-shadow: 0 10px 22px rgba(6,24,60,0.06);
+
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--blue-950);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hover lift (optional but nice) */
+.why-item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(6,24,60,0.10);
+  transition: all 0.18s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .why-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   RIGHT COLUMN BALANCE — logo + leadership + notice
+===================================================== */
+
+/* Make the logo card feel lighter */
+.logo-card{
+  padding: 20px;
+}
+
+
+/* Shrink logo slot a bit more and reduce dashed border intensity */
+.logo-slot{
+  width: 68%;          /* was 75% */
+  border-radius: 20px;
+  border: 1px dashed rgba(42,124,255,0.30); /* softer */
+}
+
+/* Keep caption compact */
+.logo-caption h3{
+  font-size: 17px;     /* was 18px */
+}
+
+/* Leadership tiles: slightly smaller and more “compact” */
+.leadership-profiles{
+  gap: 10px;           /* was 12px */
+}
+
+.leader-mini{
+  padding: 9px 8px;    /* was 10px 8px */
+  border-radius: 16px; /* was 18px */
+}
+
+.leader-mini-avatar{
+  width: 58px;         /* was 64px */
+  height: 58px;
+}
+
+.leader-mini-name{
+  font-size: 12.7px;   /* was 13px */
+}
+
+.leader-mini-role{
+  font-size: 11.5px;   /* was 12px */
+}
+
+/* Notice card: align with compact look */
+.notice-card{
+  padding: 18px;
+}
+
+.notice-icon{
+  width: 38px;
+  height: 38px;
+  border-radius: 13px;
+  font-size: 17px;
+}
+
+.notice-text span{
+  font-size: 13.2px;   /* was 13.5px */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Prevent ugly fallback rendering if an avatar image fails */
+.leader-mini-avatar{
+  background: linear-gradient(135deg, rgba(42,124,255,0.14), rgba(230,239,255,0.90));
+}
+.leader-mini-avatar img{
+  display:block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   HERO SPACING FIX — match AgriTech rhythm
+   Paste at VERY END of GenAI WG.css
+===================================================== */
+
+/* 1) Tighten overall grid spacing */
+@media (min-width: 981px){
+  .hero-grid{
+    gap: 18px; /* was larger; tighter like AgriTech */
+  }
+
+  /* Right column: same spacing between logo/leadership/notice */
+  .hero-panel{
+    gap: 12px; /* consistent and compact */
+  }
+}
+
+/* 2) Tighten left block internal spacing */
+.hero-top{
+  margin-bottom: 14px; /* reduce the big empty band */
+}
+
+.hero-content h1{
+  margin: 0 0 10px 0; /* remove extra default spacing */
+}
+
+.hero-lead{
+  margin: 0;          /* stop extra gap after paragraph */
+}
+
+/* 3) Hero bottom: bring buttons + metrics closer */
+.hero-bottom{
+  margin-top: 16px;   /* smaller separation from top text */
+  padding-top: 14px;  /* tighter divider area if you have it */
+}
+
+.hero-actions{
+  margin-bottom: 12px; /* tighter before metrics */
+}
+
+/* 4) Metrics: reduce the “floating” look */
+.hero-metrics{
+  gap: 10px;
+}
+.metric{
+  padding: 12px 12px;
+}
+.metric-value{
+  margin-bottom: 2px;
+}
+
+/* 5) Right column cards: remove unintended vertical gaps */
+.logo-card,
+.info-card,
+.notice-card{
+  margin: 0; /* ensure no stray margins */
+}
+
+/* 6) Logo caption spacing */
+.logo-caption h3{
+  margin: 10px 0 8px 0; /* tighter */
+}
+.affiliation{
+  margin-top: 8px;      /* tighter separator gap */
+  padding-top: 10px;
+}
+
+/* 7) Leadership tiles: reduce extra space under the heading */
+.leadership-info h4{
+  margin: 0 0 10px 0;
+}
+.leadership-profiles{
+  margin: 0;            /* remove any extra margin */
+  gap: 10px;
+}
+
+/* 8) Notice card: align icon/text tighter */
+.notice-text strong{
+  display: block;
+  margin-bottom: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   GENAI HERO — match AgriTech spacing/placement
+   Paste at VERY END of GenAI WG.css
+===================================================== */
+
+/* 1) Same hero padding rhythm */
+.genai-hero{
+  padding: 56px 0 26px; /* same feel as AgriTech */
+}
+
+/* 2) Same strict grid system */
+.hero-grid--strict{
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 18px;            /* key: same “main gap” */
+  align-items: start;
+}
+
+/* 3) Same internal stacking + gaps */
+.hero-left,
+.hero-right{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;            /* key: same vertical gap */
+}
+
+/* 4) Kill the GenAI 2x2 override that changes placement */
+@media (min-width: 981px){
+  .hero-panel{
+    display: flex !important;         /* override "display: contents" */
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  /* Ensure grid doesn't switch into 2-row layout */
+  .hero-grid{
+    grid-template-rows: unset !important;
+  }
+
+  .hero-content,
+  .logo-card,
+  .info-card,
+  .notice-card{
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+
+/* 5) Make sure no random margins create extra gaps */
+.logo-card,
+.info-card,
+.notice-card{
+  margin: 0;
+}
+
+/* 6) Mobile: same collapse behavior */
+@media (max-width: 980px){
+  .hero-grid--strict{
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 }
