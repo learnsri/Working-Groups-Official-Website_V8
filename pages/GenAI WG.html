@@ -11,17 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/pages/GenAI WG.css" />
-  <link rel="icon" href="test logo.png" type="image/x-icon" />
+  <link rel="icon" type="image/png" href="../assets/images/icons/12favicon.png">
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo"><h2>GenAI WG</h2></div>
+  <!-- NAV (SAME AS ABOUT/AGROTEC) -->
+<header class="navbar" id="siteNav">
+  <div class="container nav-inner">
 
-      <ul class="nav-menu">
+    <!-- Logo -->
+    <a href="../index.html" class="brand" aria-label="Working Groups Home">
+      <img
+        src="../assets/images/brand/WorkingGroupLogo.png"
+        alt="Working Groups Logo"
+      />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-wrap nav-desktop" aria-label="Primary">
+      <ul class="nav-menu nav-menu--desktop">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../pages/About.html">About</a></li>
         <li><a href="../pages/AgroTec WG.html">AgriTech WG</a></li>
@@ -30,13 +40,38 @@
         <li><a href="../pages/news/news.html">News and Updates</a></li>
         <li><a href="../pages/Contact.html">Contact</a></li>
       </ul>
+    </nav>
 
-      <div class="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </header>
+    <!-- Hamburger -->
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="primaryNav"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
+  <!-- Mobile Drawer -->
+  <nav class="nav-mobile" aria-label="Mobile Primary">
+    <ul class="nav-menu nav-menu--mobile" id="primaryNav">
+      <button class="nav-close" aria-label="Close menu">&times;</button>
+
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/About.html">About</a></li>
+      <li><a href="../pages/AgroTec WG.html">AgriTech WG</a></li>
+      <li><a href="../pages/GenAI WG.html" class="active">GenAI WG</a></li>
+      <li><a href="../pages/People.html">People</a></li>
+      <li><a href="../pages/news/news.html">News and Updates</a></li>
+      <li><a href="../pages/Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+</header>
   <!-- HERO -->
   <main>
     <section class="genai-hero">

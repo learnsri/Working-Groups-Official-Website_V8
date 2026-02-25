@@ -10,31 +10,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/pages/Contact.css" />
-  <link rel="icon" href="test logo.png" type="image/x-icon" />
+  
+  <link rel="icon" type="image/png" href="../../assets/images/icons/12favicon.png">
 </head>
 
 <body>
 
   <!-- Header -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo"><h2>Contact</h2></div>
+<header class="navbar" id="siteNav">
+  <div class="container nav-inner">
 
-      <ul class="nav-menu">
-        <li><a href="../index.html" >Home</a></li>
-        <li><a href="../pages/About.html" >About</a></li>
-        <li><a href="../pages/AgroTec WG.html">AgriTech WG</a></li>
-        <li><a href="../pages/GenAI WG.html">GenAI WG</a></li>
-        <li><a href="../pages/People.html">People</a></li>
-        <li><a href="../pages/news/news.html">News and Updates</a></li>
-        <li><a href="../pages/Contact.html" class="active">Contact</a></li>
+    <!-- Logo -->
+    <a href="../index.html" class="brand" aria-label="Working Groups Home">
+      <img
+        src="../assets/images/brand/WorkingGroupLogo.png"
+        alt="Working Groups Logo"
+      />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-wrap nav-desktop" aria-label="Primary">
+      <ul class="nav-menu nav-menu--desktop">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="AgroTec WG.html">AgriTech WG</a></li>
+        <li><a href="GenAI WG.html">GenAI WG</a></li>
+        <li><a href="People.html">People</a></li>
+        <li><a href="news/news.html">News and Updates</a></li>
+        <li><a href="Contact.html" class="active">Contact</a></li>
       </ul>
+    </nav>
 
-      <div class="hamburger" aria-label="Open menu" tabindex="0">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </header>
+    <!-- Hamburger -->
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="primaryNav"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <nav class="nav-mobile" aria-label="Mobile Primary">
+    <ul class="nav-menu nav-menu--mobile" id="primaryNav">
+
+      <button class="nav-close" aria-label="Close menu">&times;</button>
+
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="AgroTec WG.html">AgriTech WG</a></li>
+      <li><a href="GenAI WG.html">GenAI WG</a></li>
+      <li><a href="People.html">People</a></li>
+      <li><a href="news/news.html">News and Updates</a></li>
+      <li><a href="Contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="nav-overlay" aria-hidden="true"></div>
+</header>
 
   <!-- HERO (UPDATED: removed the old intro text, kept the design premium and not empty) -->
   
@@ -180,7 +216,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script src="../assets/js/index.js"></script>
 
   <!-- Copy buttons + Mobile nav (kept exactly as your working code) -->
   <script>

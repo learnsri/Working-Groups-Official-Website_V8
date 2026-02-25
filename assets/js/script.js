@@ -1,37 +1,89 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Hamburger toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+  // =========================
+  // Hamburger toggle (same as Index)
+  // =========================
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.getElementById('primaryNav');
+  const navOverlay = document.querySelector('.nav-overlay');
+  const closeBtn = document.querySelector('.nav-close');
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-    }
+  if (hamburger && navMenu) {
+    const openMenu = () => {
+      hamburger.classList.add('active');
+      navMenu.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
 
-    // Navbar shadow on scroll
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
+      if (navOverlay) {
+        navOverlay.classList.add('active');
+        navOverlay.setAttribute('aria-hidden', 'false');
+      }
+
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = scrollbarWidth + 'px';
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+
+      if (navOverlay) {
+        navOverlay.classList.remove('active');
+        navOverlay.setAttribute('aria-hidden', 'true');
+      }
+
+      document.body.style.paddingRight = '';
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    };
+
+    const toggleMenu = () => {
+      if (navMenu.classList.contains('active')) closeMenu();
+      else openMenu();
+    };
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (navOverlay) navOverlay.addEventListener('click', closeMenu);
+
+    // Close menu when a link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) closeMenu();
+      });
     });
 
-    // Feature hover animations (for touch devices too)
-    const features = document.querySelectorAll('.feature-item');
-    features.forEach(f => {
-        f.addEventListener('mouseenter', () => {
-            f.style.transform = 'translateY(-5px)';
-            f.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
-        });
-        f.addEventListener('mouseleave', () => {
-            f.style.transform = 'translateY(0)';
-            f.style.boxShadow = 'none';
-        });
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu();
+    }, { passive: true });
+
+    // Click outside to close (optional but matches Index behavior)
+    document.addEventListener('click', (e) => {
+      const clickedInsideNav = navMenu.contains(e.target);
+      const clickedHamburger = hamburger.contains(e.target);
+      const clickedOverlay = navOverlay ? navOverlay.contains(e.target) : false;
+
+      if ((!clickedInsideNav && !clickedHamburger && navMenu.classList.contains('active')) || clickedOverlay) {
+        closeMenu();
+      }
     });
+  }
+
+  // =========================
+  // Navbar shadow on scroll (same as Index)
+  // =========================
+  const navbar = document.getElementById('siteNav');
+  const onScroll = () => {
+    if (!navbar) return;
+    if (window.scrollY > 10) navbar.classList.add('is-scrolled');
+    else navbar.classList.remove('is-scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 });
 
 

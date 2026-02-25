@@ -12,30 +12,81 @@
 
   <!-- Your shared site CSS for navbar/footer -->
   <link rel="stylesheet" href="../assets/css/pages/GenAiSubGroupComingSoon.css" />
-  <link rel="icon" href="test logo.png" type="image/x-icon" />
+  
+  <link rel="icon" type="image/png" href="../../assets/images/icons/12favicon.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sub-Groups | Coming Soon</title>
+
+  <!-- Font (match your site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/pages/GenAiSubGroupComingSoon.css" />
+  <link rel="icon" type="image/png" href="../assets/images/icons/12favicon.png">
 </head>
 
 <body>
 
-  <!-- NAVBAR (same site-wide) -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo"><h2>GenAI Sub-Groups</h2></div>
+  <!-- NAVBAR (IDENTICAL STRUCTURE TO OTHER PAGES) -->
+  <header class="navbar" id="siteNav">
+    <div class="container nav-inner">
 
-      <ul class="nav-menu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/about.html">About</a></li>
-        <li><a href="../pages/AgroTec WG.html">AgriTech WG</a></li>
-        <li><a href="../pages/GenAI WG.html" class="active">GenAI WG</a></li>
-        <li><a href="../pages/People.html">People</a></li>
-        <li><a href="../pages/news/news.html">News and Updates</a></li>
-        <li><a href="../pages/Contact.html">Contact</a></li>
-      </ul>
+      <!-- Logo -->
+      <a href="../index.html" class="brand" aria-label="Working Groups Home">
+        <img
+          src="../assets/images/brand/WorkingGroupLogo.png"
+          alt="Working Groups Logo"
+        />
+      </a>
 
-      <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
+      <!-- Desktop Nav -->
+      <nav class="nav-wrap nav-desktop" aria-label="Primary">
+        <ul class="nav-menu nav-menu--desktop">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="AgroTec WG.html">AgriTech WG</a></li>
+          <li><a href="GenAI WG.html" class="active">GenAI WG</a></li>
+          <li><a href="People.html">People</a></li>
+          <li><a href="news/news.html">News and Updates</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger -->
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="primaryNav"
+        aria-expanded="false"
+      >
         <span></span><span></span><span></span>
-      </div>
+      </button>
+
     </div>
+
+    <!-- Mobile Drawer -->
+    <nav class="nav-mobile" aria-label="Mobile Primary">
+      <ul class="nav-menu nav-menu--mobile" id="primaryNav">
+        <button class="nav-close" aria-label="Close menu">&times;</button>
+
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="AgroTec WG.html">AgriTech WG</a></li>
+        <li><a href="GenAI WG.html" class="active">GenAI WG</a></li>
+        <li><a href="People.html">People</a></li>
+        <li><a href="news/news.html">News and Updates</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="nav-overlay" aria-hidden="true"></div>
   </header>
 
   <!-- SIMPLE + CREATIVE CENTERPIECE (minimal layout) -->
@@ -144,7 +195,6 @@
     </div>
   </footer>
 
-  <!-- IMPORTANT: ensure script path is correct in your project -->
-  <script src="script.js"></script>
+  <script src="../assets/js/index.js"></script>
 </body>
 </html>

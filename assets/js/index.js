@@ -369,3 +369,20 @@ const closeMenu = () => {
   translateToIndex(0, { animate: false });
   if (AUTOPLAY && !prefersReducedMotion()) scheduleNext(DURATION);
 });
+
+
+
+// Vision section reveal
+const visionSection = document.getElementById('vision');
+
+if (visionSection) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        visionSection.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(visionSection);
+}

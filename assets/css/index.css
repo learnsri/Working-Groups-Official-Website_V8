@@ -30,23 +30,41 @@
   --max:1200px;
 }
 
+
 html{scroll-behavior:smooth}
 
 /* ✅ Prevent sideways drag reveal on mobile */
 html, body{
+  padding-top: 50px; /* adjust if needed */
   width:100%;
   max-width:100%;
   overflow-x:hidden;
   position:relative;
 }
 
+/* =========================================================
+   PREMIUM GLOBAL BACKGROUND
+========================================================= */
+
 body{
   font-family:'Poppins',sans-serif;
   color:var(--text);
+  background: #f6f7fb; /* your original clean base */
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Blurred Color Layer */
+body::before{
+  content:"";
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+
   background:
-    radial-gradient(1200px 700px at 15% 0%, rgba(15,58,138,0.10), transparent 60%),
-    radial-gradient(900px 600px at 85% 10%, rgba(17,138,78,0.08), transparent 60%),
-    linear-gradient(var(--bg), var(--bg));
+    radial-gradient(1000px 600px at 15% 20%, rgba(15,58,138,0.20), transparent 60%),
+    radial-gradient(900px 600px at 85% 70%, rgba(17,138,78,0.18), transparent 60%),
+    radial-gradient(1200px 800px at 50% 100%, rgba(15,23,42,0.10), transparent 60%);
 }
 
 /* Container */
@@ -61,8 +79,10 @@ body{
 ========================= */
 
 .navbar{
-  position: sticky;
+  position: fixed;      /* 🔥 THIS is the change */
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   padding: 14px 0;
   background: transparent;
@@ -196,8 +216,6 @@ body{
   background: var(--text);
   transition: transform .28s ease, opacity .28s ease;
 }
-
-
 
 /* =========================
    MOBILE NAV — Drawer outside navbar card
@@ -734,7 +752,6 @@ body{
 .bg9 { background-image: url("../images/slides/ORP4698.jpg");}
 .bg10 { background-image: url("../images/slides/ORP4487.jpg"); }
 .bg11 { background-image: url("../images/slides/Slide10.jpg"); }
-
 
 /* Responsive */
 @media (max-width: 980px){
@@ -1286,4 +1303,128 @@ body{
     margin-right: auto;
   }
   .site-footer.site-footer--premium .footer-social{justify-content:center;}
+}
+
+/* =========================
+   SECTION SPACING SYSTEM
+========================= */
+
+.band{
+  padding: 30px 0;
+}
+
+.band-soft{
+  padding: 10px 0;
+}
+
+/* =========================
+   VISION — PREMIUM UPGRADE
+========================= */
+
+#vision {
+  position: relative;
+  overflow: hidden;
+}
+
+#vision::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(900px 500px at 15% 20%, rgba(15,58,138,0.08), transparent 60%),
+    radial-gradient(800px 500px at 85% 70%, rgba(17,138,78,0.08), transparent 60%);
+  filter: blur(20px);
+  z-index: 0;
+}
+
+#vision .container {
+  position: relative;
+  z-index: 2;
+}
+
+#vision h2 {
+  font-size: 42px;
+  letter-spacing: -1px;
+  background: linear-gradient(
+    90deg,
+    var(--blue800),
+    var(--green600)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#vision .lead {
+  font-size: 17.5px;
+  padding-left: 18px;
+  border-left: 4px solid var(--blue700);
+  background: rgba(15,58,138,0.04);
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+#vision .vision-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#vision.is-visible .vision-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   STRATEGIC SHIFT – PREMIUM BACKGROUND
+========================= */
+
+#strategic-shift {
+  position: relative;
+  background:
+    radial-gradient(900px 500px at 10% 0%, rgba(15,58,138,0.06), transparent 60%),
+    radial-gradient(800px 500px at 90% 100%, rgba(17,138,78,0.06), transparent 60%),
+    linear-gradient(#ffffff, #f8fafc);
+}
+
+/* =========================================================
+   SHOW ORIGINAL PAGE BACKGROUND (remove band panels)
+   Applies only to the requested sections – cards untouched.
+========================================================= */
+
+/* Let the body background show through */
+#vision,
+#strategic-shift,
+#alignment,
+#leaderpart{
+  background: transparent !important;
+}
+
+/* If these sections have .band / .band-soft backgrounds, neutralize them */
+#vision.band,
+#vision.band-soft,
+#strategic-shift.band,
+#strategic-shift.band-soft,
+#alignment.band,
+#alignment.band-soft,
+#leaderpart.band,
+#leaderpart.band-soft{
+  background: transparent !important;
+}
+
+/* Optional: keep spacing consistent (does NOT change cards) */
+#vision,
+#strategic-shift,
+#alignment,
+#leaderpart{
+  position: relative;
+  overflow: visible;
+}
+
+/* =========================================================
+   MAKE SECTIONS TRANSPARENT (SHOW ORIGINAL PAGE BACKGROUND)
+========================================================= */
+
+.band,
+.band-soft {
+  background: transparent !important;
 }

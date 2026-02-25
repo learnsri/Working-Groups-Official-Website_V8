@@ -3,30 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>About LEARN Working Groups</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/pages/About.css" />
-  <link rel="icon" href="test logo.png" type="image/x-icon" />
+  <link rel="icon" type="image/png" href="../assets/images/icons/12favicon.png">
 </head>
 
 <body>
 
   <!-- Header -->
-<header class="navbar">
-  <div class="container">
-    <div class="logo">
-      <a class="brand" href="../index.html" aria-label="Working Groups Home">
-        <img src="../assets/images/brand/WorkingGroupLogo.png"
-             alt="LEARN Working Groups"
-             class="brand-logo">
-      </a>
-    </div>
+<!-- NAV (SAME AS INDEX) -->
+<header class="navbar" id="siteNav">
+  <div class="container nav-inner">
 
-    <ul class="nav-menu" id="primaryNav">
+    <!-- Logo -->
+    <a href="../index.html" class="brand" aria-label="Working Groups Home">
+      <img
+        src="../assets/images/brand/WorkingGroupLogo.png"
+        alt="Working Groups Logo"
+      />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-wrap nav-desktop" aria-label="Primary">
+      <ul class="nav-menu nav-menu--desktop">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="About.html" class="active">About</a></li>
+        <li><a href="AgroTec WG.html">AgriTech WG</a></li>
+        <li><a href="GenAI WG.html">GenAI WG</a></li>
+        <li><a href="People.html">People</a></li>
+        <li><a href="news/news.html">News and Updates</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="primaryNav"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <nav class="nav-mobile" aria-label="Mobile Primary">
+    <ul class="nav-menu nav-menu--mobile" id="primaryNav">
+
+      <!-- CLOSE BUTTON -->
+      <button class="nav-close" aria-label="Close menu">&times;</button>
+
       <li><a href="../index.html">Home</a></li>
       <li><a href="About.html" class="active">About</a></li>
       <li><a href="AgroTec WG.html">AgriTech WG</a></li>
@@ -35,14 +68,10 @@
       <li><a href="news/news.html">News and Updates</a></li>
       <li><a href="Contact.html">Contact</a></li>
     </ul>
+  </nav>
 
-    <!-- Overlay moved INSIDE .container, after the menu -->
-    <div class="nav-overlay" aria-hidden="true"></div>
-
-    <div class="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
+  <!-- Overlay -->
+  <div class="nav-overlay" aria-hidden="true"></div>
 </header>
 
   <!-- HERO (CLEAN) -->
@@ -407,8 +436,8 @@
         </p>
 
         <div class="footer-social">
-          <a href="#" title="LinkedIn"><img src="assets/images/icons/linkedin.png" alt="LinkedIn"></a>
-          <a href="#" title="Email"><img src="assets/images/icons/mail.png" alt="Email"></a>
+          <a href="#" title="LinkedIn"><img src="../assets/images/icons/linkedin.png" alt="LinkedIn"></a>
+          <a href="#" title="Email"><img src="../assets/images/icons/mail.png" alt="Email"></a>
         </div>
       </div>
     </div>

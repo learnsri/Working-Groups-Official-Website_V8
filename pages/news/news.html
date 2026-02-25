@@ -5,31 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>News & Updates</title>
   <link rel="stylesheet" href="../../assets/css/pages/News-Updates.css">
-  <link rel="icon" href="test logo.png" type="image/x-icon" />
+  <link rel="icon" type="image/png" href="../../assets/images/icons/12favicon.png">
 </head>
 
 <body>
   <!-- Header -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo"><h2>News & Updates</h2></div>
+<!-- NAV (IDENTICAL TO OTHER PAGES) -->
+<!-- NAVBAR (MATCHES AgroTechSubGroupComingSoon) -->
+<header class="navbar" id="siteNav">
+  <div class="container nav-inner">
 
-      <ul class="nav-menu">
-          <li><a href="../../index.html" >Home</a></li>
-          <li><a href="../../pages/About.html">About Us</a></li>
-          <li><a href="../../pages/GenAI WG.html">GenAI WG</a></li>
-          <li><a href="../../pages/AgroTec WG.html">AgriTech WG</a></li>
-          <li><a href="../../pages/news/news.html" class="active">News & Updates</a></li>
-          <li><a href="../../pages/People.html">People</a></li>
-          <li><a href="../../pages/Contact.html">Contact</a></li>
+    <!-- Logo -->
+    <a href="../index.html" class="brand" aria-label="Working Groups Home">
+      <img
+        src="../assets/images/brand/WorkingGroupLogo.png"
+        alt="Working Groups Logo"
+      />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-wrap nav-desktop" aria-label="Primary">
+      <ul class="nav-menu nav-menu--desktop">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../pages/About.html">About</a></li>
+        <li><a href="../../pages/AgroTec WG.html">AgriTech WG</a></li>
+        <li><a href="../../pages/GenAI WG.html">GenAI WG</a></li>
+        <li><a href="../../pages/People.html">People</a></li>
+        <li><a href="news.html" class="active">News and Updates</a></li>
+        <li><a href="../../pages/Contact.html">Contact</a></li>
       </ul>
+    </nav>
 
-      <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </header>
+    <!-- Hamburger -->
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="primaryNav"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
 
+  </div>
+
+  <!-- Mobile Drawer -->
+  <nav class="nav-mobile" aria-label="Mobile Primary">
+    <ul class="nav-menu nav-menu--mobile" id="primaryNav">
+
+      <button class="nav-close" aria-label="Close menu">&times;</button>
+
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/About.html">About</a></li>
+      <li><a href="../pages/AgroTec WG.html">AgriTech WG</a></li>
+      <li><a href="../pages/GenAI WG.html">GenAI WG</a></li>
+      <li><a href="../pages/People.html">People</a></li>
+      <li><a href="news.html" class="active">News and Updates</a></li>
+      <li><a href="../pages/Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="nav-overlay" aria-hidden="true"></div>
+</header>
   <!-- Hero -->
   <section class="news-hero">
     <div class="container news-hero-inner">
@@ -320,111 +357,9 @@
   </footer>
 
   <!-- Your existing hamburger / global JS -->
-  <script src="script.js"></script>
+  <script src="../../assets/js/script.js"></script>
 
   <!-- Filter logic (front page only) -->
-  <script>
 
-    // script.js — Mobile nav toggle (open/close) + accessibility
-
-(() => {
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".nav-menu");
-
-  if (!hamburger || !navMenu) return;
-
-  const openMenu = () => {
-    hamburger.classList.add("active");
-    navMenu.classList.add("active");
-    document.body.style.overflow = "hidden"; // prevent background scroll
-  };
-
-  const closeMenu = () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-    document.body.style.overflow = ""; // restore scroll
-  };
-
-  const toggleMenu = () => {
-    const isOpen = navMenu.classList.contains("active");
-    isOpen ? closeMenu() : openMenu();
-  };
-
-  // Click to toggle
-  hamburger.addEventListener("click", toggleMenu);
-
-  // Keyboard support (Enter / Space)
-  hamburger.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      toggleMenu();
-    }
-  });
-
-  // Close when clicking a nav link
-  navMenu.addEventListener("click", (e) => {
-    const link = e.target.closest("a");
-    if (link) closeMenu();
-  });
-
-  // Close when clicking outside the menu
-  document.addEventListener("click", (e) => {
-    const clickedInsideMenu = navMenu.contains(e.target);
-    const clickedHamburger = hamburger.contains(e.target);
-
-    if (!clickedInsideMenu && !clickedHamburger && navMenu.classList.contains("active")) {
-      closeMenu();
-    }
-  });
-
-  // Close on ESC
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && navMenu.classList.contains("active")) {
-      closeMenu();
-    }
-  });
-
-  // Optional: close menu if screen resized to desktop
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768 && navMenu.classList.contains("active")) {
-      closeMenu();
-    }
-  });
-})();
-
-
-    (function () {
-      const filterButtons = document.querySelectorAll('.category-card[data-filter]');
-      const cards = document.querySelectorAll('.news-card[data-category]');
-
-      function setActive(btn) {
-        filterButtons.forEach(b => {
-          b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
-      }
-
-      function applyFilter(filter) {
-        cards.forEach(card => {
-          const cat = (card.getAttribute('data-category') || '').toLowerCase();
-          const show = filter === 'all' ? true : cat.split(' ').includes(filter);
-          card.style.display = show ? '' : 'none';
-        });
-      }
-
-      filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.getAttribute('data-filter');
-          setActive(btn);
-          applyFilter(filter);
-        });
-      });
-
-      // default
-      applyFilter('all');
-    })();
-  </script>
 </body>
 </html>
