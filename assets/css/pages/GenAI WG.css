@@ -38,6 +38,14 @@
 
 html{ scroll-behavior:smooth; }
 
+html, body{
+  padding-top: 50px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body{
   font-family:'Poppins',sans-serif;
   line-height:1.7;
@@ -330,8 +338,10 @@ body{
    HERO
 ========================= */
 .genai-hero{
-  padding: 118px 0 42px;  /* 68 + 50 */
-  margin-top: 62px;       /* match AgriTech behavior */
+  position: relative;
+  padding: 118px 0 42px;
+  margin-top: 2px;
+  overflow: hidden;
 }
 
 .hero-grid{
