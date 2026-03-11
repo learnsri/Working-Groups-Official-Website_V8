@@ -2287,3 +2287,77 @@ body{
   }
 
 }
+
+
+
+
+/* =========================
+   MOBILE FIX
+   AgriTech WG + GenAI WG
+   ========================= */
+
+@media (max-width: 768px){
+
+/* Fix hero spacing under navbar */
+.agrotec-hero,
+.genai-hero{
+    padding-top:120px;
+    padding-bottom:60px;
+    margin-top:0;
+    min-height:auto;
+}
+
+/* Center hero content nicely */
+.agrotec-hero h1,
+.genai-hero h1{
+    font-size:34px;
+    line-height:1.3;
+}
+
+/* Stack buttons */
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:20px;
+}
+
+.hero-buttons a{
+    width:100%;
+    text-align:center;
+}
+
+/* Fix metric cards */
+.metrics-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+}
+
+/* Fix section padding */
+.section,
+.agrotec-section,
+.genai-section{
+    padding:50px 20px;
+}
+
+/* Fix logo grids */
+.logo-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+/* Make cards tighter */
+.card{
+    padding:20px;
+}
+
+/* Fix text spacing */
+.section h2{
+    font-size:26px;
+}
+
+.section p{
+    font-size:15px;
+}
+
+}
