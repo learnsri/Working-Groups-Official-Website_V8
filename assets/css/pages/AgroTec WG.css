@@ -35,6 +35,14 @@
 
 html{ scroll-behavior:smooth; }
 
+html, body{
+  padding-top: 50px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body{
   font-family:'Poppins',sans-serif;
   line-height:1.7;
@@ -360,10 +368,11 @@ body{
 /* Keep spacing for fixed nav, but pull hero background to top */
 /* Keep spacing for fixed nav, but pull hero background to top (same as About) */
 .agrotec-hero{
-  padding: 118px 0 52px;  /* 68 + 50 */
-  margin-top: 62px;      /* pull background up behind navbar */
+  position: relative;
+  padding: 108px 0 52px;
+  margin-top: 1px;
+  overflow: hidden;
 }
-
 /* Ensure navbar inner uses same container sizing */
 .nav-inner.container{
   max-width: 1200px;
@@ -2166,4 +2175,244 @@ body{
     font-size:15px;
 }
 
+}
+
+
+
+/* =========================================
+   AGROTEC HERO + PAGE MOBILE FIX
+========================================= */
+
+@media (max-width: 980px){
+  .agrotec-hero{
+    padding: 104px 0 38px;
+    margin-top: 48px;
+  }
+
+  .hero-grid,
+  .hero-grid--strict{
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .hero-left,
+  .hero-right{
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-content,
+  .logo-card,
+  .info-card,
+  .notice-card,
+  .section-card{
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-content h1{
+    font-size: 34px;
+    line-height: 1.18;
+    word-break: break-word;
+  }
+
+  .hero-lead{
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 100%;
+  }
+
+  .hero-actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-metrics{
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .metric{
+    padding: 13px 14px;
+  }
+
+  .logo-slot{
+    width: min(240px, 78%);
+  }
+
+  .affiliation{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .affiliation-text{
+    width: 100%;
+  }
+
+  .affiliation-mark img{
+    height: 34px;
+  }
+
+  .tri-cards{
+    grid-template-columns: 1fr;
+  }
+
+  .subgroup-grid--clickable{
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px){
+  .navbar{
+    padding: 10px 0;
+  }
+
+  .nav-inner{
+    padding: 10px 12px;
+    border-radius: 18px;
+  }
+
+  .brand img{
+    height: 40px;
+  }
+
+  .agrotec-hero{
+    padding: 96px 0 30px;
+    margin-top: 36px;
+  }
+
+  .container{
+    width: 92%;
+  }
+
+  .hero-content{
+    padding: 22px 16px;
+  }
+
+  .hero-content h1{
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .hero-lead{
+    font-size: 14.5px;
+  }
+
+  .logo-card{
+    padding: 16px;
+  }
+
+  .info-card{
+    padding: 16px;
+  }
+
+  .notice-card{
+    padding: 14px 16px;
+  }
+
+  .section-card{
+    padding: 18px 16px;
+  }
+
+  .subgroup{
+    padding: 14px;
+  }
+
+  .subgroup-body{
+    grid-template-columns: 48px 1fr;
+    gap: 10px;
+  }
+
+  .subgroup-logo{
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 520px){
+  .agrotec-hero{
+    padding: 92px 0 26px;
+    margin-top: 28px;
+  }
+
+  .hero-content h1{
+    font-size: 27px;
+    line-height: 1.22;
+  }
+
+  .hero-content{
+    padding: 20px 14px;
+    border-radius: 18px;
+  }
+
+  .hero-lead{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .metric-value{
+    font-size: 17px;
+  }
+
+  .metric-label{
+    font-size: 12px;
+  }
+
+  .logo-slot{
+    width: min(220px, 82%);
+    padding: 14px;
+  }
+
+  .logo-caption h3{
+    font-size: 16px;
+  }
+
+  .leadership-profiles{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .leader-mini{
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px 12px;
+  }
+
+  .leader-mini-avatar{
+    width: 52px;
+    height: 52px;
+    flex: 0 0 auto;
+  }
+
+  .leader-mini-name{
+    font-size: 12.5px;
+  }
+
+  .leader-mini-role{
+    font-size: 11.5px;
+  }
+
+  .notice-card{
+    gap: 10px;
+  }
+
+  .notice-icon{
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
 }
