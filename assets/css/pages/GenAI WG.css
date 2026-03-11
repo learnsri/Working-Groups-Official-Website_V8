@@ -2275,89 +2275,193 @@ body{
 
 
 /* =========================
-   WIDER CONTENT CONTAINER
-========================= */
-
-@media (min-width: 1200px){
-
-  .genai-hero .container,
-  .content-section .container{
-    max-width: 1420px;   /* wider than nav */
-    width: 94%;
-  }
-
-}
-
-
-
-
-/* =========================
-   MOBILE FIX
+   WORKING MOBILE FIX
    AgriTech WG + GenAI WG
-   ========================= */
+   Paste at very bottom
+========================= */
 
 @media (max-width: 768px){
 
-/* Fix hero spacing under navbar */
-.agrotec-hero,
-.genai-hero{
-    padding-top:120px;
-    padding-bottom:60px;
-    margin-top:0;
-    min-height:auto;
-}
+  /* Hero spacing under fixed navbar */
+  .agrotec-hero,
+  .genai-hero{
+    padding: 108px 0 24px !important;
+    margin-top: 0 !important;
+  }
 
-/* Center hero content nicely */
-.agrotec-hero h1,
-.genai-hero h1{
-    font-size:34px;
-    line-height:1.3;
-}
+  /* Keep the content inside with safe side spacing */
+  .agrotec-hero .container,
+  .genai-hero .container,
+  .content-section .container{
+    width: calc(100% - 24px) !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
 
-/* Stack buttons */
-.hero-buttons{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin-top:20px;
-}
+  /* Force single-column hero layout */
+  .hero-grid,
+  .hero-grid--strict{
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
 
-.hero-buttons a{
-    width:100%;
-    text-align:center;
-}
+  .hero-left,
+  .hero-right{
+    gap: 14px !important;
+  }
 
-/* Fix metric cards */
-.metrics-grid{
-    grid-template-columns:1fr;
-    gap:16px;
-}
+  /* Hero card spacing */
+  .hero-content{
+    padding: 22px 16px !important;
+    border-radius: 18px !important;
+  }
 
-/* Fix section padding */
-.section,
-.agrotec-section,
-.genai-section{
-    padding:50px 20px;
-}
+  .hero-content h1{
+    font-size: 30px !important;
+    line-height: 1.22 !important;
+    margin-bottom: 10px !important;
+  }
 
-/* Fix logo grids */
-.logo-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
+  .hero-lead{
+    font-size: 14.5px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 14px !important;
+  }
 
-/* Make cards tighter */
-.card{
-    padding:20px;
-}
+  /* Buttons stack properly */
+  .hero-actions{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+  }
 
-/* Fix text spacing */
-.section h2{
-    font-size:26px;
-}
+  .hero-actions .btn{
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
 
-.section p{
-    font-size:15px;
-}
+  /* Metrics become 1 per row */
+  .hero-metrics{
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
 
+  .metric{
+    padding: 12px !important;
+  }
+
+  /* Right-side cards */
+  .logo-card,
+  .info-card,
+  .notice-card,
+  .section-card,
+  .tri-card,
+  .panel{
+    padding: 16px !important;
+    border-radius: 18px !important;
+  }
+
+  /* Logo sizing */
+  .logo-slot{
+    width: 100% !important;
+    max-width: 220px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Leadership profiles stack better */
+  .leadership-profiles{
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    text-align: left !important;
+  }
+
+  .leader-mini{
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 10px !important;
+    gap: 12px !important;
+  }
+
+  .leader-mini-avatar{
+    width: 54px !important;
+    height: 54px !important;
+    flex: 0 0 54px !important;
+  }
+
+  /* Affiliation line wraps neatly */
+  .affiliation{
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .affiliation-mark img{
+    height: 30px !important;
+  }
+
+  /* General section spacing */
+  .content-section{
+    padding: 20px 0 50px !important;
+  }
+
+  .section-head h2{
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+
+  .section-head p,
+  .prose p,
+  .tri-card p,
+  .panel p,
+  .subgroup-text p{
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* Sub-groups single column */
+  .subgroup-grid,
+  .subgroup-grid--clickable,
+  .tri-cards,
+  .split,
+  .why-grid,
+  .highlight-grid{
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .subgroup{
+    padding: 14px !important;
+  }
+
+  .subgroup-body{
+    grid-template-columns: 48px 1fr !important;
+    gap: 10px !important;
+  }
+
+  .subgroup-logo{
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  /* Full-width strategy band safe on mobile */
+  .strategy-band{
+    margin: 40px 0 !important;
+    padding: 40px 0 !important;
+  }
+
+  .strategy-band-inner{
+    width: calc(100% - 24px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Footer spacing */
+  .site-footer.site-footer--premium .footer-container{
+    padding: 42px 18px 30px !important;
+    gap: 24px !important;
+  }
 }
